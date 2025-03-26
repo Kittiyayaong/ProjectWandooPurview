@@ -6,3 +6,21 @@
 ## :thinking: 사전 요구 사항 (필요 도구)
 
 ## :test_tube: 실습 순서
+
+1. Module 01 - Information Protection
+* Sensitive Label
+* Auto-labeling 
+
+2. Module 02 - Data Loss Prevention
+* DLP policy
+* Endpoint DLP
+
+3. Module 03 - Insider Risk Management
+* IRM
+* Adaptive protection
+
+4. Other Purview Features
+* Connector SDK
+* Communication Compliance
+* Data Lifecycle management
+* Data Map
