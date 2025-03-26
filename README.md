@@ -9,11 +9,14 @@
 ## :test_tube: 실습 순서
 
 1. Module 01 - Information Protection
-* Sensitive Label
-* Auto-labeling 
+* [Public Sensitivity Label](https://github.com/Kittiyayaong/ProjectWandooPurview/blob/main/Purview%20Module01%20-%2001.%20Sensitivity%20Labels%20(Public).md)
+* [General Sensitivity Label](https://github.com/Kittiyayaong/ProjectWandooPurview/blob/main/Purview%20Module01%20-%2002.%20Sensitivity%20Labels%20(General).md)
+* [Confidential Sensitivity Label](https://github.com/Kittiyayaong/ProjectWandooPurview/blob/main/Purview%20Module01%20-%2003.%20Sensitivity%20Labels%20(Confidential).md)
+* [Label Policy](https://github.com/Kittiyayaong/ProjectWandooPurview/blob/main/Purview%20Module01%20-%2004.%20Label%20policy.md)
+* [Auto-labeling](https://github.com/Kittiyayaong/ProjectWandooPurview/blob/main/Purview%20Module01%20-%2005.%20Auto-labeling.md)
 
 2. Module 02 - Data Loss Prevention
-* DLP policy
+* [Template-based DLP policy](https://github.com/Kittiyayaong/ProjectWandooPurview/blob/main/Purview%20Module02%20-%2001.%20%20Template-based%20Data%20Loss%20Prevention.md)
 * Endpoint DLP
 
 3. Module 03 - Insider Risk Management
