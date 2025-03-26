@@ -1,5 +1,3 @@
-![image](https://github.com/user-attachments/assets/1d3a620c-c17f-426a-9dd5-034ce0607343)# Purview Module 01. Information Protection
-
 ## Lab 1. Sensitivity labels (General) 
 
 ### General SL 설정하기 
