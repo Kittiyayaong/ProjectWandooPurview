@@ -1,6 +1,6 @@
 # Purview Module 01. Information Protection
 
-## Lab 1. Sensitivity labels
+## Lab 1. Sensitivity labels (Public) 
 
 ### Sensitivity labels이란?
 민감한 정보 분류 및 보호를 위한 테그
