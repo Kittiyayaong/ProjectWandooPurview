@@ -51,7 +51,7 @@
 
 이메일에 기본 라벨을 적용하는 기능입니다. 선택한 라벨이 새 이메일과 기존의 라벨이 없는 이메일에 자동으로 적용됩니다. 사용자는 이메일을 보내기 전에 기본 라벨을 변경할 수 있습니다
 
-*Inherit label from attachments: 
+* Inherit label from attachments: 
 
 이메일에 첨부된 파일의 라벨을 상속받을 수 있습니다. 사용자가 "General - Wandoo" 라벨이 적용된 새 이메일을 작성하고, "Confidential" 라벨이 적용된 문서를 첨부하면, 이메일은 자동으로 "Confidential" 라벨을 상속받아 보안을 강화할 수 있습니다. 
 
