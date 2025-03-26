@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/0533ee4f-ebca-4ed9-87c0-22962fcea9f1)![image](https://github.com/user-attachments/assets/1f9eba26-fc5a-464f-bf6e-a5a098b8e875)![image](https://github.com/user-attachments/assets/dff2a1ee-0629-4dc7-8c36-ddb82e445930)# Purview Module 01. Information Protection
+# Purview Module 01. Information Protection
 
 ## Lab 1. Sensitivity labels
 
@@ -19,18 +19,6 @@
 2. Sensitivity labels(SL)의 유형: 각기 다른 데이터 보호 요구 사항을 충족하고, 조직 내에서 민감한 정보를 효과적인 관리를 제공합니다.
 
 ![image](https://github.com/user-attachments/assets/aa40007a-bb6b-4c9c-8874-83801c3b7a1e)
-
-### Container SL설정을 위한 사전 작업 
-Microsoft Entra ID에서 Microsoft 365 그룹에 민감도 라벨 할당: Microsoft Entra 기능을 사용하여 민감도 라벨 지원을 활성화해야 합니다. 이를 통해 Microsoft 365 그룹에 민감도 라벨을 할당할 수 있으며, 이러한 라벨은 Microsoft Purview 포털에서 게시되고 그룹 및 사이트에 대해 구성됩니다
-
-1. Powershell 열기
-2. Microsoft Entra ID에서 Microsoft 365 그룹에 민감도 라벨 할당
-
-![image](https://github.com/user-attachments/assets/cb08c736-ab41-4663-87e3-86c4b4be8751)
-
-3. 그룹 설정을 구성하기 위한 Microsoft Entra cmdlet (아래 링크 step-by-step으로 진행)
- 
-![image](https://github.com/user-attachments/assets/e6ade0eb-f5d2-4bd9-bb9f-95d4c250efed)
 
 ### Public SL 설정하기 
 1. 설정위치
@@ -65,7 +53,7 @@ Purview console (purview.microsoft.com) > Information protection >  Sensitivity 
 라벨 우선순위는 기본적으로 가장 높은 우선순위로 설정됩니다. 이는 사용자가 라벨을 생성할 때 기본값으로 설정되지만, 생성 후에 변경할 수 있습니다.
 기본값으로 가장 높은 우선순위가 설정되는 이유는 새로운 라벨이 생성될 때 해당 라벨이 중요한 데이터에 적용될 가능성이 높기 때문입니다. 하지만 필요에 따라 관리자가 우선순위를 조정하여 다른 라벨과의 충돌을 방지하고, 데이터 보호 정책을 효과적으로 적용할 수 있습니다.
 
-5. Public Label 설정하기 - 설정 가능한 범위(Scope)
+5. Scope 설정하기: Public Label 설정 가능한 범위
 * 파일 및 기타 데이터 자산: Microsoft 365, Microsoft Fabric(포함 Power BI), Microsoft Azure에서 파일 및 데이터 자산에 라벨을 적용합니다.
 * 이메일: 모든 버전의 Outlook에서 보낸 메시지에 라벨을 적용합니다.
 * 회의: Outlook 및 Teams에서 일정 및 회의에 라벨을 적용합니다.
@@ -73,7 +61,7 @@ Purview console (purview.microsoft.com) > Information protection >  Sensitivity 
 
 ![image](https://github.com/user-attachments/assets/8a1e3be7-4dc2-4da4-82a4-80f446531303)
 
-6. Public Label 설정하기 - Items 설정
+6. Item 설정하기
 Microsoft 365에서 항목에 라벨을 적용할 때 사용할 보호 설정이며, 각 항목은 특정 보호 기능을 제공하며, 필요에 따라 선택할 수 있습니다.
 
 * 액세스 제어: 라벨이 적용된 항목에 누가 접근하고 볼 수 있는지를 제어합니다.
@@ -82,11 +70,31 @@ Microsoft 365에서 항목에 라벨을 적용할 때 사용할 보호 설정이
 
 ![image](https://github.com/user-attachments/assets/c4269a99-e3a2-46fd-97e1-2ffe1ed0b244)
 
-7. Public Label 설정하기 - Auto-labeling 설정 (이후 과정에서 다시 설정 예정)![image](https://github.com/user-attachments/assets/fd48c559-9eea-4ba8-8966-60c593895fb7)
+7. Auto-labeling 설정 (이후 과정에서 다시 설정 예정)
 
 ![image](https://github.com/user-attachments/assets/332a365e-c9b5-47ee-80aa-bd2b8ea092ea)
 
 Auto-labeling? 
+
 특정 조건에 맞는 콘텐츠를 포함하는 Office 파일이나 이메일에 자동으로 라벨을 적용할 수 있습니다. 예를 들어, 회사에서 민감한 정보를 포함한 파일이나 이메일에 자동으로 민감도 라벨을 적용한다면, 민감한 정보는 예를 들어, 신용 카드 번호, 은행 계좌 번호 등이 될 수 있습니다. 회사에서 "기밀" 라벨을 생성하고, 사회 보장 번호나 신용 카드 번호가 포함된 모든 파일과 이메일에 이 라벨을 자동으로 적용하도록 설정하면 사용자가 직접 라벨을 적용하지 않아도, 민감한 정보가 포함된 모든 파일과 이메일에 자동으로 "기밀" 라벨이 적용되어 보호됩니다
 
-![image](https://github.com/user-attachments/assets/58162496-6f69-4e4f-822c-2fb5050a6ea8)
+8. Container SL 설정하기
+
+![image](https://github.com/user-attachments/assets/c87a64dd-feb8-4fb9-b4ff-7584c666121e)
+
+* 프라이버시 및 외부 사용자 액세스: 내부 및 외부 사용자가 라벨이 적용된 팀과 Microsoft 365 그룹에 접근할 수 있는 수준을 제어할 수 있습니다. 예를 들어, 외부 사용자의 접근을 제한하거나 특정 사용자만 접근할 수 있도록 설정할 수 있습니다.
+* 외부 공유 및 조건부 액세스: 라벨이 적용된 SharePoint 사이트의 외부 공유를 제어하고 조건부 액세스 설정을 구성할 수 있습니다. 이를 통해 민감한 정보를 보호하고, 특정 조건을 만족하는 사용자만 접근할 수 있도록 할 수 있습니다.
+* 비공개 팀 검색 가능성 및 공유 채널 설정: 이 설정을 통해 비공개 팀이 검색에서 발견될 수 있는지 여부를 결정하고, 공유 채널에 초대할 수 있는 팀 유형을 제어할 수 있습니다. 이를 통해 비공개 팀의 보안을 강화하고, 특정 팀만 공유 채널에 접근할 수 있도록 할 수 있습니다.
+
+![image](https://github.com/user-attachments/assets/da1654d0-e9f5-4406-97b8-d4b721affb9a)
+
+![image](https://github.com/user-attachments/assets/8b6f1a2c-4a2c-4aed-a7fe-6928d0a309f1)
+
+* Microsoft Entra 조건부 액세스를 사용하여 라벨이 지정된 SharePoint 사이트 보호 
+라벨이 지정된 사이트에 대한 접근을 제어하는 데 사용됩니다. 이를 통해 관리되지 않는 장치에서 라벨이 지정된 SharePoint 사이트에 접근할 수 있는지 여부를 제어하거나, 리소스 테넌트에서 인증 컨텍스트를 적용하여 사이트 접근을 제한할 수 있습니다.
+
+9. 설정 완료
+    
+![image](https://github.com/user-attachments/assets/aa087ea1-0426-4f83-aa89-51c1b06e3f85)
+
+![image](https://github.com/user-attachments/assets/6d79b3b1-90d5-4a08-9900-c0886d369910)
