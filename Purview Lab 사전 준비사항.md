@@ -1,7 +1,7 @@
 ## Lab 사전 준비사항 
 
-### Container SL설정을 위한 사전 작업 
-Microsoft Entra ID에서 Microsoft 365 그룹에 민감도 라벨 할당: Microsoft Entra 기능을 사용하여 민감도 라벨 지원을 활성화해야 합니다. 이를 통해 Microsoft 365 그룹에 민감도 라벨을 할당할 수 있으며, 이러한 라벨은 Microsoft Purview 포털에서 게시되고 그룹 및 사이트에 대해 구성됩니다
+### 라벨 설정을 위한 사전 작업 
+Microsoft Purview에서 Microsoft 365 Groups, Teams, SharePoint 사이트에 민감도 라벨(Sensitivity Label)을 적용하기 위해, Entra ID 테넌트에 EnableMIPLabels 설정을 활성화하는 작업을 수행합니다.
 
 ---
 
