@@ -4,24 +4,18 @@
 
 ### ✅ 설정하기 (Template base) 
 
-1. Process
-
-![image](https://github.com/user-attachments/assets/ece16377-b91a-4956-b9b7-5a93fc720ea6)
-
-2. 설정 위치
-
-Purview console > Solutions > Data Loss Prevention > Policies > + Create policy
+1. 설정 위치로 이동: Purview console > Solutions > Data Loss Prevention > Policies > + Create policy
 
 ![image](https://github.com/user-attachments/assets/fb23fcba-5bda-4f5c-969e-4a5f6c2f2bd8)
 
-3. “Choose what type of data to protect”: DLP 정책이 보호할 데이터의 범위를 선택하는 단계로, 이번 랩에서는 **Data stored in connected sources**로 사용합니다.
+2. “Choose what type of data to protect”: DLP 정책이 보호할 데이터의 범위를 선택하는 단계로, 이번 랩에서는 **Data stored in connected sources**로 사용합니다.
 
 | 옵션 | 의미 | 적용 대상 예시 | 권장 시나리오 |
 |---|---|---|---|
 | **Data stored in connected sources** | 조직에 연결된 Microsoft 365 데이터 소스(Exchange Online, SharePoint, Teams 등) 또는 관리 디바이스(MDM 등록 PC)의 **저장된 데이터(Data at rest)** 및 **사용 중인 데이터(Data in use)** 보호 | - 이메일 (Exchange Online)<br>- SharePoint 문서<br>- Teams 채팅<br>- Endpoint DLP (디바이스 파일 이동/복사 차단) | ✅ **Microsoft 365 내부 데이터 보호** |
 | **Data in browser activity** | 브라우저 활동 중 발생하는 데이터 보호 (**Defender for Cloud Apps + Microsoft Edge 통합 필요**) | - 사용자가 SaaS 앱(Google Drive, Box 등)에 기밀 데이터 업로드/다운로드 시 차단 또는 알림<br>- Shadow IT 활동 제어 | ✅ **SaaS 클라우드 앱, Shadow IT 제어** |
 
-4. Template-based Policy: GDPR을 예로 진행 (Enhanced > GDPR Enhanced > next > policy name setting > next) 
+3. Template-based Policy: GDPR을 예로 진행 (Enhanced > GDPR Enhanced > next > policy name setting > next) 
 
 ![image](https://github.com/user-attachments/assets/d132f61e-1b95-4514-8a6b-fdf9d031aab4)
 
@@ -29,7 +23,7 @@ Purview console > Solutions > Data Loss Prevention > Policies > + Create policy
 >
 > Enhanced templates은 온프레미스 파일 저장소, Power BI, Azure Storage, Azure SQL Server, AWS S3, OpenAI ChatGPT, Google Gemini, Microsoft Bing Chat 위치에서는 사용할 수 없습니다.
 
-5. admin unit 설정하기 (참고 – 이번 Lab에서는 설정하지 않습니다.Entra에서 사전 설정된 Admin unit을 사용합니다.)
+4. admin unit 설정하기 (참고 – 이번 Lab에서는 설정하지 않습니다.Entra에서 사전 설정된 Admin unit을 사용합니다.)
 
 * Admin Units?
 
