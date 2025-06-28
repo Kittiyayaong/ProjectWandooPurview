@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/0a14ab78-eb7b-4fda-ad2f-5030a8b4e86e)# Purview Module 01. Information Protection
+# Purview Module 01. Information Protection
 
 ## Lab 5. Auto-labeling
 
