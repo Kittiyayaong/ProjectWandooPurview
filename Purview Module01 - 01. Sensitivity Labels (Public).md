@@ -20,7 +20,7 @@
 
 ![image](https://github.com/user-attachments/assets/aa40007a-bb6b-4c9c-8874-83801c3b7a1e)
 
-### Public SL 설정하기 
+### ✅ Public SL 설정하기 
 1. 설정위치
 Purview console (purview.microsoft.com) > Information protection >  Sensitivity Labels 	
 
@@ -49,8 +49,9 @@ Purview console (purview.microsoft.com) > Information protection >  Sensitivity 
 
 ![image](https://github.com/user-attachments/assets/689aad47-087a-4616-91b6-b5c538d90b01)
 
-* Tip.
-라벨 우선순위는 기본적으로 가장 높은 우선순위로 설정됩니다. 이는 사용자가 라벨을 생성할 때 기본값으로 설정되지만, 생성 후에 변경할 수 있습니다.
+> ⭐️ Tips.
+>
+> 라벨 우선순위는 기본적으로 가장 높은 우선순위로 설정됩니다. 이는 사용자가 라벨을 생성할 때 기본값으로 설정되지만, 생성 후에 변경할 수 있습니다.
 기본값으로 가장 높은 우선순위가 설정되는 이유는 새로운 라벨이 생성될 때 해당 라벨이 중요한 데이터에 적용될 가능성이 높기 때문입니다. 하지만 필요에 따라 관리자가 우선순위를 조정하여 다른 라벨과의 충돌을 방지하고, 데이터 보호 정책을 효과적으로 적용할 수 있습니다.
 
 5. Scope 설정하기: Public Label 설정 가능한 범위
@@ -74,9 +75,9 @@ Microsoft 365에서 항목에 라벨을 적용할 때 사용할 보호 설정이
 
 ![image](https://github.com/user-attachments/assets/332a365e-c9b5-47ee-80aa-bd2b8ea092ea)
 
-Auto-labeling? 
-
-특정 조건에 맞는 콘텐츠를 포함하는 Office 파일이나 이메일에 자동으로 라벨을 적용할 수 있습니다. 예를 들어, 회사에서 민감한 정보를 포함한 파일이나 이메일에 자동으로 민감도 라벨을 적용한다면, 민감한 정보는 예를 들어, 신용 카드 번호, 은행 계좌 번호 등이 될 수 있습니다. 회사에서 "기밀" 라벨을 생성하고, 사회 보장 번호나 신용 카드 번호가 포함된 모든 파일과 이메일에 이 라벨을 자동으로 적용하도록 설정하면 사용자가 직접 라벨을 적용하지 않아도, 민감한 정보가 포함된 모든 파일과 이메일에 자동으로 "기밀" 라벨이 적용되어 보호됩니다
+> ⭐️ Tips. Auto-labeling?
+>
+> 특정 조건에 맞는 콘텐츠를 포함하는 Office 파일이나 이메일에 자동으로 라벨을 적용할 수 있습니다. 예를 들어, 회사에서 민감한 정보를 포함한 파일이나 이메일에 자동으로 민감도 라벨을 적용한다면, 민감한 정보는 예를 들어, 신용 카드 번호, 은행 계좌 번호 등이 될 수 있습니다. 회사에서 "기밀" 라벨을 생성하고, 사회 보장 번호나 신용 카드 번호가 포함된 모든 파일과 이메일에 이 라벨을 자동으로 적용하도록 설정하면 사용자가 직접 라벨을 적용하지 않아도, 민감한 정보가 포함된 모든 파일과 이메일에 자동으로 "기밀" 라벨이 적용되어 보호됩니다
 
 8. Container SL 설정하기
 
@@ -90,7 +91,9 @@ Auto-labeling?
 
 ![image](https://github.com/user-attachments/assets/8b6f1a2c-4a2c-4aed-a7fe-6928d0a309f1)
 
-* Microsoft Entra 조건부 액세스를 사용하여 라벨이 지정된 SharePoint 사이트 보호 
+> ⭐️ Tips.
+>
+>  Microsoft Entra 조건부 액세스를 사용하여 라벨이 지정된 SharePoint 사이트 보호 
 라벨이 지정된 사이트에 대한 접근을 제어하는 데 사용됩니다. 이를 통해 관리되지 않는 장치에서 라벨이 지정된 SharePoint 사이트에 접근할 수 있는지 여부를 제어하거나, 리소스 테넌트에서 인증 컨텍스트를 적용하여 사이트 접근을 제한할 수 있습니다.
 
 9. 설정 완료
