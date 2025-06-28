@@ -115,4 +115,36 @@ $grpUnifiedSetting = Get-MgBetaDirectorySetting | Where-Object { $_.Values.Name 
 $grpUnifiedSetting.Values
 ```
 
-- 완료 - 
+13. EnableMIPLabels 설정 확인 및 적용: 아래 명령어를 PowerShell(Beta 모듈 Import된 상태)에서 실행합니다.
+```powershell
+$grpUnifiedSetting = Get-MgBetaDirectorySetting | Where-Object { $_.Values.Name -eq "EnableMIPLabels" }
+$grpUnifiedSetting.Values
+```
+> 결과 해석
+> * 값이 출력되면: 이미 설정 완료 (예: EnableMIPLabels True)
+> * 값이 없거나 빈 결과면: 설정이 없는 상태 → 아래 단계로 생성 필요
+
+14. EnableMIPLabels 설정 추가: 실행 후 새로운 설정 ID가 출력되면 정상적으로 적용
+```powershell
+$setting = @{
+    DisplayName = "Group.Unified"
+    TemplateId = (Get-MgBetaDirectorySettingTemplate | Where-Object {$_.DisplayName -eq "Group.Unified"}).Id
+    Values = @(
+        @{Name="EnableMIPLabels"; Value="True"}
+    )
+}
+New-MgBetaDirectorySetting -BodyParameter $setting
+```
+
+15. 설정 적용 여부 최종 확인: 아래 명령어로 EnableMIPLabels 설정값이 True인지 확인
+```powershell
+$grpUnifiedSetting = Get-MgBetaDirectorySetting | Where-Object { $_.Values.Name -eq "EnableMIPLabels" }
+$grpUnifiedSetting.Values
+```
+| Name            | Value |
+| --------------- | ----- |
+| EnableMIPLabels | True  |
+
+<img width="808" alt="image" src="https://github.com/user-attachments/assets/9a0b240a-d2c4-421b-89f5-d29bb8ea13bc" />
+
+- 완료 -
