@@ -99,18 +99,20 @@ Connect-MgGraph -Scopes "Directory.ReadWrite.All"
 Install-Module Microsoft.Graph.Beta -Scope CurrentUser
 ```
 
-11. 설치 후, Beta 모듈 Import
-```bash
-Import-Module Microsoft.Graph.Beta
-```
-
 > ⭐️ Beta 모듈 설치 여부를 확인하려면
 > ```bash
 > Get-Module Microsoft.Graph.Beta -ListAvailable
 > ```
+
+11. 설치 후, Beta 모듈 Import (진행 더딜시에 control+C로 중단 후 12번 진행) 
+```bash
+Import-Module Microsoft.Graph.Beta
+```
 
 12. Microsoft Entra 조직(테넌트)에 EnableMIPLabels 설정이 되어 있는지 확인 (EnableMIPLabels = Microsoft 365 그룹과 SharePoint 사이트에 민감도 라벨(Sensitivity Label) 을 적용할 수 있도록 활성화하는 기능)
 ```bash
 $grpUnifiedSetting = Get-MgBetaDirectorySetting | Where-Object { $_.Values.Name -eq "EnableMIPLabels" }
 $grpUnifiedSetting.Values
 ```
+
+- 완료 - 
