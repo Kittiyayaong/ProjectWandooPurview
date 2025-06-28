@@ -2,30 +2,108 @@
 
 ## Lab 1. Custom Data Loss Prevention Policy
 
-AI 활용 데이터 유출 방지 시나리오 & Purview Custom DLP Policy 설정
-
-## 1. 시나리오 개요
-
-최근 조직 내 사용자들이 ChatGPT, Copilot, Copilot for Security 등 **AI 기반 서비스**를 활용하면서  
-고객 개인정보, 기밀 문서, 소스코드 등 민감 데이터를 AI Prompt에 복사해 붙여넣는 사례가 급증.
-
-* 리스크: AI 서비스는 입력 데이터를 학습 및 로그로 저장할 수 있어 **데이터 유출 위험** 존재
-  * 고객명단(이메일 포함)을 복사해 AI에 요약 요청
-  * 소스코드를 복사해 AI에 코드 리뷰 요청
+시나리오 
+1. **Microsoft Teams Prompt & 채팅 데이터 보호**
+2. **Microsoft Copilot for M365 Prompt 보호**
+3. **ChatGPT (외부 AI) Prompt 보호**
 
 ---
 
-## ✅ 2. 방지 시나리오
+## 1️⃣ Microsoft Teams Prompt & Chat Protection
 
-| 시나리오 | 설명 |
+### 적용 시나리오
+
+- Teams 채팅, 채널 메시지에 **고객 개인정보, 기밀 데이터, 소스코드** 입력/공유 방지
+- 내부 협업 중 **불필요한 민감정보 노출 차단**
+
+---
+
+### 정책 구성 방법
+
+#### [Step 1] 정책 생성
+
+1. Microsoft Purview > **Data Loss Prevention** > Policies > **Create policy**
+2. Data stored in connected sources: Copilot for Microsoft 365 Prompt 내 입력값도 M365 서비스 내 보호 가능
+
+<img width="1414" alt="image" src="https://github.com/user-attachments/assets/9af9240d-80c1-4a80-be48-aa390646f312" />
+
+3. **Custom policy** 선택
+
+<img width="1419" alt="image" src="https://github.com/user-attachments/assets/01b9db6b-139d-4f9f-8160-36c503edf542" />
+
+---
+
+#### [Step 2] Name/ Admin/ Locations 지정
+
+1. Name: Wandoo - Copilot M365 Prompt Data Protection
+2. Admin: Full directory(Default) 유지
+   
+<img width="1440" alt="image" src="https://github.com/user-attachments/assets/39290057-52f4-438e-ace0-dcc2c1d9405b" />
+
+3. **Teams chat and channel messages*** 설정
+
+<img width="1421" alt="image" src="https://github.com/user-attachments/assets/4d676c3e-af6b-4e8c-9ca3-06064ba32b2b" />
+
+---
+
+#### [Step 4] Policy rule 설정
+
+<img width="1391" alt="스크린샷 2025-06-29 오전 8 30 52" src="https://github.com/user-attachments/assets/bcb16b76-c989-46e3-82f8-01840eacaadf" />
+
+- **Condition**
+  - Content contains: Sensitive info types (예: 주민등록번호, 여권번호, 신용카드번호 등)
+  - Add condition → Content contains  → Sensitive info types 선택
+    * 주민등록번호 (Korea Resident Registration Number)
+    * 여권번호 (Korea Passport Number)
+    * 신용카드번호 (Credit Card Number)
+
+<img width="976" alt="스크린샷 2025-06-29 오전 8 34 28" src="https://github.com/user-attachments/assets/a3eac2d4-cba0-47fe-9080-bb65102c4f76" />
+
+- **Actions**
+  - Block everyone 선택: 내부 사용자 간에도 민감정보 공유를 방지하려는 목적으로 Shadow IT 또는 부주의로 인한 유출 리스크 최소화
+   - Teams 채팅/채널 메시지에 정책 조건(Sensitive info types) 매칭 시:
+     * 메시지 전송 차단
+     * SharePoint, OneDrive, Teams 파일 접근 차단(해당 정책 Location 범위 내에서)
+
+<img width="964" alt="스크린샷 2025-06-29 오전 8 35 46" src="https://github.com/user-attachments/assets/c6b07e7e-d033-4002-b7a1-d3059933eb9f" />
+       
+| 옵션                                              | 의미                             |
+| ----------------------------------------------- | ------------------------------ |
+| **Block everyone (기본 선택)**                      | 조직 내부/외부 모든 사용자에게 차단 적용        |
+| **Block only people outside your organization** | 조직 외부 사용자(예: 고객, 파트너)에게만 차단 적용 |
+
+- 그 외 설정
+
+| 항목                     | 권장 설정                                                                                   |
+| ---------------------- | --------------------------------------------------------------------------------------- |
+| **User notifications** | On (정책 차단 이유 사용자에게 표시)                                                                  |
+| **User overrides**     | Off (Override 허용하지 않음)                                                                  |
+| **Incident reports**   | Severity level = High<br>Send alert to admins = On<br>Add security team email if needed |
+
+<img width="969" alt="스크린샷 2025-06-29 오전 8 41 36" src="https://github.com/user-attachments/assets/844f13e3-c7ac-47a9-96f0-49f7380510cc" />
+
+---
+
+#### [Step 5] Policy mode
+- Run in simulation mode + Show policy tips로 설정 
+
+| ✅ **옵션**                                         | **의미**                                                                          | **활용 시점**                                        |
+| ------------------------------------------------ | ------------------------------------------------------------------------------- | ------------------------------------------------ |
+| **1. Run the policy in simulation mode**         | 정책을 테스트 모드로 실행하여, 조건에 매칭되는 항목만 모니터링하고 실제 차단/조치는 하지 않음                           | - 정책 조건과 Scope 검증<br>- 조직 영향 없이 Rule match 상황 파악 |
+| 🔹 **Show policy tips while in simulation mode** | Simulation mode 상태에서도 사용자에게 Policy Tip(알림) 표시 <br> **효과:** 사용자 인지 가능, 실제 차단은 없음 | - 사용자 교육 및 사전 안내 목적                              |
+| **2. Turn the policy on immediately**            | 정책을 즉시 활성화(Enforce)하여, 조건에 매칭되는 항목을 차단/조치                                       | - 테스트 완료 후, 실제 보호 적용 시                           |
+| **3. Leave the policy turned off**               | 정책을 비활성화 상태로 둠 (저장만)                                                            | - 아직 정책을 적용할 준비가 안된 경우                           |
+
+---
+
+### ✅ 최종 요약
+
+| 대상 | 설정 |
 |---|---|
-| **Prompt에 개인정보 포함** | 고객 이메일, 전화번호, 주민등록번호 등 |
-| **Prompt에 기밀 코드 포함** | 소스코드, API Key, 내부 알고리즘 |
-| **Prompt에 경영 기밀 포함** | 재무 데이터, M&A 계획, 전략 문서 |
+| **Microsoft Copilot for M365 Prompt** | Data stored in connected sources → Locations에 Copilot 포함 → 조건(Sensitive info) 추가 → Block/Notify 설정 |
 
-Microsoft Purview DLP의 **Custom Policy**를 통해 방지 
-* **AI 서비스 접속 시 데이터 업로드/복사 방지**
-* **조건 매칭 시 사용자 알림 + 차단** 조치
+---
+
 
 ---
 
@@ -34,23 +112,15 @@ Microsoft Purview DLP의 **Custom Policy**를 통해 방지
 ### ✨ [Step 1] 정책 생성
 
 1. Microsoft Purview > **Data Loss Prevention** > Policies > **Create policy**
-2. **Custom policy** 선택
+2. Data stored in connected sources: Copilot for Microsoft 365 Prompt 내 입력값도 M365 서비스 내 보호 가능
 
----
+<img width="1414" alt="image" src="https://github.com/user-attachments/assets/9af9240d-80c1-4a80-be48-aa390646f312" />
 
-### ✨ [Step 2] Scope 선택
+4. **Custom policy** 선택
 
-- **Data in browser activity**
-  - AI SaaS 앱에 붙여넣는 데이터를 보호 (Defender for Cloud Apps 필요)
+<img width="1419" alt="image" src="https://github.com/user-attachments/assets/01b9db6b-139d-4f9f-8160-36c503edf542" />
 
-또는
-
-- **Data stored in connected sources**
-  - Copilot for Microsoft 365 Prompt 내 입력값도 M365 서비스 내 보호 가능
-
----
-
-### ✨ [Step 3] Locations 지정
+### ✨ [Step 2] Locations 지정
 
 - **Cloud apps** (Defender for Cloud Apps 연결 필요)
   - ChatGPT, Bard, Copilot for Security 등 사용 중인 AI 서비스 URL 포함
