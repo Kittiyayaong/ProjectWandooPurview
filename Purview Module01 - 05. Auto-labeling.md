@@ -24,7 +24,9 @@ Purview console > Solution > Audit > Start recording user and admin activity 클
 
 ![image](https://github.com/user-attachments/assets/bd2c75d1-5fb6-42b7-97ac-840c013810a7)
 
-Tip.템플릿 기반 설정: 템플릿 기반 설정을 사용할 때는 감사 로그를 활성화해야 합니다. 템플릿을 기반으로 한 자동 라벨링 정책이 조직의 보안 및 규정 준수 요구사항을 충족하기 위해 더 정교한 추적과 모니터링이 필요하기 때문입니다
+> ⭐️ Tips. 템플릿 기반 설정
+>
+> 템플릿 기반 설정을 사용할 때는 감사 로그를 활성화해야 합니다. 템플릿을 기반으로 한 자동 라벨링 정책이 조직의 보안 및 규정 준수 요구사항을 충족하기 위해 더 정교한 추적과 모니터링이 필요하기 때문입니다
 
 4. Template Auto-labeling 설정하기 – Template 기반 (참고)
 
