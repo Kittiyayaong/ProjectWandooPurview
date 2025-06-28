@@ -72,7 +72,7 @@
 | **Block everyone (기본 선택)**                      | 조직 내부/외부 모든 사용자에게 차단 적용        |
 | **Block only people outside your organization** | 조직 외부 사용자(예: 고객, 파트너)에게만 차단 적용 |
 
-- ** User notifications(Policy Tip/정책 차단 이유 사용자에게 표시) **: DLP 정책 조건 매칭 시, 사용자에게 알림(Prompt)을 표시하는 기능으로, Purview UI 상에서는 “User notifications”라고 표기되지만, Teams, Outlook 등 사용자 화면에는 Policy Tip 형태로 나타납니다.
+- User notifications(Policy Tip/정책 차단 이유 사용자에게 표시): DLP 정책 조건 매칭 시, 사용자에게 알림(Prompt)을 표시하는 기능으로, Purview UI 상에서는 “User notifications”라고 표기되지만, Teams, Outlook 등 사용자 화면에는 Policy Tip 형태로 나타납니다.
    - Policy tip text: 🚫 Wandoo Security: 이 메시지는 주민등록번호, 여권번호, 카드번호 등 민감정보 포함으로 차단되었습니다. 안전한 공유를 위해 IT 보안팀과 상의해주세요. 
 
 <img width="983" alt="image" src="https://github.com/user-attachments/assets/4641abf1-556f-48cb-8bba-be542d843711" />
