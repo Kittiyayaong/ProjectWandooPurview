@@ -16,7 +16,7 @@ Microsoft Purview의 자동 라벨링(auto-labeling)은 민감한 정보를 자�
    
 Purview console > solution > Information protection > sensitivity label > 작성된 라벨 선택 후 edit > auto-labeling 설정으로 진입  
 
-![image](https://github.com/user-attachments/assets/4fb52954-1abf-456d-9ec8-aca90b40f447)
+<img src="(https://github.com/user-attachments/assets/4fb52954-1abf-456d-9ec8-aca90b40f447)" width="800">
 
 3. Template Auto-labeling 설정 전 사전 설정 : Audit 기능 활성화 (참고)
    
