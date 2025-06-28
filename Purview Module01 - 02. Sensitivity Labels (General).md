@@ -13,3 +13,5 @@
 
 4. 설정완료
 ![image](https://github.com/user-attachments/assets/0eee7a30-c3d8-4f36-a2ec-610b1e77cb78)
+
+### 🔗 [다음 Lab으로 이동하기 »](https://github.com/Kittiyayaong/ProjectWandooPurview/blob/main/Purview%20Module01%20-%2003.%20Sensitivity%20Labels%20(Confidential).md)
