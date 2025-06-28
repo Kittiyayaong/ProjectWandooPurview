@@ -5,7 +5,7 @@ Microsoft Purview에서 Microsoft 365 Groups, Teams, SharePoint 사이트에 민
 
 ---
 
-## Windows 
+## ✅ Windows 
 
 ### Powershell 설치
    
@@ -41,9 +41,11 @@ $grpUnifiedSetting = Get-MgBetaDirectorySetting | Where-Object { $_.Values.Name 
 
 ---
 
-## MAC
+## ✅ MAC
 
-1. Spotlight 검색 (Command + Space) → terminal 입력 → Enter
+### macOS 환경 준비
+1. Terminal 실행: Command + Space → terminal 입력 → Enter
+
 2. Homebrew 설치 확인
 
 ```bash
@@ -77,24 +79,30 @@ pwsh
 ```
 <img width="382" alt="image" src="https://github.com/user-attachments/assets/7c1a9253-9309-4563-ae34-3d61487f1b5f" />
 
-7. PowerShell에서 Microsoft Graph 모듈 설치; PowerShell (pwsh) 진입 후 아래 명령어를 실행, 
+### Microsoft Graph 모듈 설치
+
+1. PowerShell에서 Microsoft Graph 모듈 설치; PowerShell (pwsh) 진입 후 아래 명령어를 실행, 
 ```bash
 Install-Module Microsoft.Graph -Scope CurrentUser
 ```
 
-8. 설치 확인: 이미지와 같이 나오면, 정상 
+2. 설치 확인: 이미지와 같이 나오면, 정상 
 ```bash
 Get-Module Microsoft.Graph -ListAvailable
 ```
 <img width="675" alt="스크린샷 2025-06-29 오전 7 33 12" src="https://github.com/user-attachments/assets/8a6dca68-aada-41f0-9d38-36011cf1b911" />
 
-9. 계정 연결
+###  Graph 테넌트 연결
+
+1. 계정 연결
 ```bash
 Connect-MgGraph -Scopes "Directory.ReadWrite.All"
 ```
 <img width="685" alt="image" src="https://github.com/user-attachments/assets/ab4b29e2-9b5f-4c23-9354-3751a0adf492" />
 
-10. 베타 모듈 추가 설치: 설치 시 [Y]/[A] 선택지가 나오면 A + Enter 로 진행.
+### Microsoft Graph Beta 모듈 설치
+
+1. 베타 모듈 추가 설치: 설치 시 [Y]/[A] 선택지가 나오면 A + Enter 로 진행.
 ```bash
 Install-Module Microsoft.Graph.Beta -Scope CurrentUser
 ```
@@ -104,18 +112,20 @@ Install-Module Microsoft.Graph.Beta -Scope CurrentUser
 > Get-Module Microsoft.Graph.Beta -ListAvailable
 > ```
 
-11. 설치 후, Beta 모듈 Import (진행 더딜시에 control+C로 중단 후 12번 진행) 
+2. 설치 후, Beta 모듈 Import (진행 더딜시에 control+C로 중단 후 12번 진행) 
 ```bash
 Import-Module Microsoft.Graph.Beta
 ```
 
-12. Microsoft Entra 조직(테넌트)에 EnableMIPLabels 설정이 되어 있는지 확인 (EnableMIPLabels = Microsoft 365 그룹과 SharePoint 사이트에 민감도 라벨(Sensitivity Label) 을 적용할 수 있도록 활성화하는 기능)
+### EnableMIPLabels 설정 확인 및 적용
+
+1. Microsoft Entra 조직(테넌트)에 EnableMIPLabels 설정이 되어 있는지 확인 (EnableMIPLabels = Microsoft 365 그룹과 SharePoint 사이트에 민감도 라벨(Sensitivity Label) 을 적용할 수 있도록 활성화하는 기능)
 ```bash
 $grpUnifiedSetting = Get-MgBetaDirectorySetting | Where-Object { $_.Values.Name -eq "EnableMIPLabels" }
 $grpUnifiedSetting.Values
 ```
 
-13. EnableMIPLabels 설정 확인 및 적용: 아래 명령어를 PowerShell(Beta 모듈 Import된 상태)에서 실행합니다.
+2. EnableMIPLabels 설정 확인 및 적용: 아래 명령어를 PowerShell(Beta 모듈 Import된 상태)에서 실행합니다.
 ```powershell
 $grpUnifiedSetting = Get-MgBetaDirectorySetting | Where-Object { $_.Values.Name -eq "EnableMIPLabels" }
 $grpUnifiedSetting.Values
@@ -124,7 +134,7 @@ $grpUnifiedSetting.Values
 > * 값이 출력되면: 이미 설정 완료 (예: EnableMIPLabels True)
 > * 값이 없거나 빈 결과면: 설정이 없는 상태 → 아래 단계로 생성 필요
 
-14. EnableMIPLabels 설정 추가: 실행 후 새로운 설정 ID가 출력되면 정상적으로 적용
+3. EnableMIPLabels 설정 추가: 실행 후 새로운 설정 ID가 출력되면 정상적으로 적용
 ```powershell
 $setting = @{
     DisplayName = "Group.Unified"
@@ -136,7 +146,7 @@ $setting = @{
 New-MgBetaDirectorySetting -BodyParameter $setting
 ```
 
-15. 설정 적용 여부 최종 확인: 아래 명령어로 EnableMIPLabels 설정값이 True인지 확인
+4. 설정 적용 여부 최종 확인: 아래 명령어로 EnableMIPLabels 설정값이 True인지 확인
 ```powershell
 $grpUnifiedSetting = Get-MgBetaDirectorySetting | Where-Object { $_.Values.Name -eq "EnableMIPLabels" }
 $grpUnifiedSetting.Values
