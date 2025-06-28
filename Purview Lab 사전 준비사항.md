@@ -92,7 +92,7 @@ Get-Module Microsoft.Graph -ListAvailable
 ```
 <img width="675" alt="스크린샷 2025-06-29 오전 7 33 12" src="https://github.com/user-attachments/assets/8a6dca68-aada-41f0-9d38-36011cf1b911" />
 
-###  Graph 테넌트 연결
+### * Graph 테넌트 연결
 
 1. 계정 연결
 ```bash
