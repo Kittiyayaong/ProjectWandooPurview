@@ -2,11 +2,7 @@
 
 ## Lab 1. Template-based Data Loss Prevention 
 
-### Data Loss Prevention이란? 
-
-![image](https://github.com/user-attachments/assets/83a8dde8-dd10-4cc7-a634-b7955e4c1b03)
-
-### 설정하기 (Template base) 
+### ✅ 설정하기 (Template base) 
 
 1. Process
 
