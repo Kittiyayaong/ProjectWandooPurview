@@ -86,3 +86,6 @@ SharePoint 사이트와 Microsoft 그룹에 기본 라벨을 적용하는 기능
 10. Policy name 및 설정완료
 
 ![image](https://github.com/user-attachments/assets/063c176a-aac6-4058-8e74-084348887471)
+
+
+### 🔗 [다음 Lab으로 이동하기 »](https://github.com/Kittiyayaong/ProjectWandooPurview/blob/main/Purview%20Module01%20-%2005.%20Auto-labeling.md)
