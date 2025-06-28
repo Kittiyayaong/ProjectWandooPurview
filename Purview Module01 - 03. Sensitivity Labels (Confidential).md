@@ -1,4 +1,5 @@
-![image](https://github.com/user-attachments/assets/430f1e65-6c5b-416a-a9a0-89e19342db31)## Lab 3. Sensitivity labels (Confidential/Confidential-internal) 
+
+## Lab 3. Sensitivity labels (Confidential/Confidential-internal) 
 
 ### Confidential SL 설정하기 
 
