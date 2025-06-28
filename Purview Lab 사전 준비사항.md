@@ -7,7 +7,7 @@ Microsoft Purview에서 Microsoft 365 Groups, Teams, SharePoint 사이트에 민
 
 ## ✅ Windows 
 
-### Powershell 설치
+### * Powershell 설치
    
 ```powershell
  winget search Microsoft.PowerShell
@@ -19,7 +19,7 @@ PowerShell Preview Microsoft.PowerShell.Preview 7.6.0.2 winget
 winget install --id Microsoft.PowerShell --source winget
 ```
 
-### Microsoft Entra ID에서 Microsoft 365 그룹에 민감도 라벨 할당을 위한 사전작업
+### * Microsoft Entra ID에서 Microsoft 365 그룹에 민감도 라벨 할당을 위한 사전작업
 
 1. 관리자권한으로 PowerShell 프롬프트를 열고 cmdlet을 실행하는 데 필요한 그래프 모듈을 설치합니다.
 
@@ -43,7 +43,7 @@ $grpUnifiedSetting = Get-MgBetaDirectorySetting | Where-Object { $_.Values.Name 
 
 ## ✅ MAC
 
-### macOS 환경 준비
+### * macOS 환경 준비
 1. Terminal 실행: Command + Space → terminal 입력 → Enter
 
 2. Homebrew 설치 확인
@@ -79,7 +79,7 @@ pwsh
 ```
 <img width="382" alt="image" src="https://github.com/user-attachments/assets/7c1a9253-9309-4563-ae34-3d61487f1b5f" />
 
-### Microsoft Graph 모듈 설치
+### * Microsoft Graph 모듈 설치
 
 1. PowerShell에서 Microsoft Graph 모듈 설치; PowerShell (pwsh) 진입 후 아래 명령어를 실행, 
 ```bash
@@ -100,7 +100,7 @@ Connect-MgGraph -Scopes "Directory.ReadWrite.All"
 ```
 <img width="685" alt="image" src="https://github.com/user-attachments/assets/ab4b29e2-9b5f-4c23-9354-3751a0adf492" />
 
-### Microsoft Graph Beta 모듈 설치
+### * Microsoft Graph Beta 모듈 설치
 
 1. 베타 모듈 추가 설치: 설치 시 [Y]/[A] 선택지가 나오면 A + Enter 로 진행.
 ```bash
@@ -117,7 +117,7 @@ Install-Module Microsoft.Graph.Beta -Scope CurrentUser
 Import-Module Microsoft.Graph.Beta
 ```
 
-### EnableMIPLabels 설정 확인 및 적용
+### * EnableMIPLabels 설정 확인 및 적용
 
 1. Microsoft Entra 조직(테넌트)에 EnableMIPLabels 설정이 되어 있는지 확인 (EnableMIPLabels = Microsoft 365 그룹과 SharePoint 사이트에 민감도 라벨(Sensitivity Label) 을 적용할 수 있도록 활성화하는 기능)
 ```bash
