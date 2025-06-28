@@ -31,3 +31,6 @@ Tip.템플릿 기반 설정: 템플릿 기반 설정을 사용할 때는 감사 
 Purview console > Solution > Information Protection > Policies > Auto-labeling policies > +Create auto-labeling policy
 
 ![image](https://github.com/user-attachments/assets/e6aa1462-4efc-424b-9ea5-3f57f7be780a)
+
+
+### 🔗 [다음 Lab으로 이동하기 »](https://github.com/Kittiyayaong/ProjectWandooPurview/blob/main/Purview%20Module02%20-%2001.%20%20Template-based%20Data%20Loss%20Prevention.md)
