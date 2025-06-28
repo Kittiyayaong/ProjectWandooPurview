@@ -101,3 +101,6 @@ Microsoft 365에서 항목에 라벨을 적용할 때 사용할 보호 설정이
 ![image](https://github.com/user-attachments/assets/aa087ea1-0426-4f83-aa89-51c1b06e3f85)
 
 ![image](https://github.com/user-attachments/assets/6d79b3b1-90d5-4a08-9900-c0886d369910)
+
+
+### 🔗 [다음 Lab으로 이동하기 »](https://github.com/Kittiyayaong/ProjectWandooPurview/blob/main/Purview%20Module01%20-%2002.%20Sensitivity%20Labels%20(General).md)
