@@ -10,6 +10,8 @@
 
 2. “Choose what type of data to protect”: DLP 정책이 보호할 데이터의 범위를 선택하는 단계로, 이번 랩에서는 **Data stored in connected sources**로 사용합니다.
 
+<img width="1437" alt="image" src="https://github.com/user-attachments/assets/1c0e4ed0-1f88-4d03-bc1f-400b95b00edb" />
+
 | 옵션 | 의미 | 적용 대상 예시 | 권장 시나리오 |
 |---|---|---|---|
 | **Data stored in connected sources** | 조직에 연결된 Microsoft 365 데이터 소스(Exchange Online, SharePoint, Teams 등) 또는 관리 디바이스(MDM 등록 PC)의 **저장된 데이터(Data at rest)** 및 **사용 중인 데이터(Data in use)** 보호 | - 이메일 (Exchange Online)<br>- SharePoint 문서<br>- Teams 채팅<br>- Endpoint DLP (디바이스 파일 이동/복사 차단) | ✅ **Microsoft 365 내부 데이터 보호** |
