@@ -49,6 +49,8 @@ $grpUnifiedSetting = Get-MgBetaDirectorySetting | Where-Object { $_.Values.Name 
 ```bash
 brew --version
 ```
+<img width="682" alt="스크린샷 2025-06-29 오전 7 15 23" src="https://github.com/user-attachments/assets/626dc0db-4757-41b3-a269-21da5fba6eed" />
+
 * ✅ 버전이 출력되면 → Homebrew가 이미 설치된 상태
 * ❌ ‘command not found’ 오류 → 아래 명령어로 Homebrew를 설치
 
@@ -56,9 +58,27 @@ brew --version
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
+<img width="1440" alt="스크린샷 2025-06-29 오전 7 17 46" src="https://github.com/user-attachments/assets/e75d0977-2a0a-4b92-8d87-6abad6e56c3f" />
 
 4. 설치확인
 ```bash
 brew --version
+```
+<img width="464" alt="image" src="https://github.com/user-attachments/assets/dd53cda3-6eb9-4150-8088-c0fba2a0fffb" />
+
+5. PowerShell 설치
+```bash
+brew install --cask powershell
+```
+
+6. Powershell 설치 완료 실행: 프롬프트가 PS > 로 바뀌면 성공적
+```bash
+pwsh
+```
+<img width="382" alt="image" src="https://github.com/user-attachments/assets/7c1a9253-9309-4563-ae34-3d61487f1b5f" />
+
+7. PowerShell에서 Microsoft Graph 모듈 설치; PowerShell (pwsh) 진입 후 아래 명령어를 실행:
+```bash
+Install-Module Microsoft.Graph -Scope CurrentUser
 ```
 
