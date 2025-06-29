@@ -1,10 +1,6 @@
 # Wandoo-KT를 위한 purview 셀프 랩 시나리오 
 
-## Purview Lab – Sensitivity Label + IRM + DLP Policy
-
-### 시나리오
-
-# Purview Lab – Wandoo HR Group Confidential Info Protection (Single HR User Setup)
+## Purview Lab – Wandoo HR Group Confidential Info Protection (Single HR User Setup)
 
 ## 시나리오 개요
 
