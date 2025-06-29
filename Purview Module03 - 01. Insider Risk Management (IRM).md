@@ -131,3 +131,31 @@ Insider Risk Policy에서 트리거(trigger)는 ‘이 정책의 감시를 시�
 위 Indicators 는 메일 외부 전송 뿐 아니라 우회 경로까지 탐지 가능 하므로, 이번 랩에서 설정 후 알림/리스크 스코어링 흐름을 확인하는 것을 권장합니다.
 * 파일 다운로드 → 재업로드
 * 라벨 제거 → 공유
+
+#### [Step 5] Detection options (Sequence detection) 설정 
+
+#### Sequence detection  
+여러 위험 행동이 연속적으로 발생할 때** 높은 Risk score를 부여하는 고급 탐지 옵션
+
+| 옵션 | 설명 | 시나리오 적합도 |
+| --- | --- | --- |
+| **Download from Microsoft 365 location then exfiltrate** | M365 (SharePoint, OneDrive)에서 파일 다운로드 후 외부 유출 시 탐지 | ⭐⭐⭐⭐⭐ (필수) |
+| Download + Obfuscate + Exfiltrate | 다운로드 후 파일 암호화/변경 및 외부 유출 시 탐지 | ⭐⭐⭐ (권장) |
+| Download + Exfiltrate + Delete | 다운로드 후 유출 후 삭제 시 탐지 | ⭐⭐⭐ (권장) |
+| Archive then exfiltrate | 파일 압축 후 외부 유출 시 탐지 | ⭐⭐ (옵션) |
+| Downgrade/remove label then exfiltrate | 라벨 다운그레이드 또는 제거 후 외부 유출 시 탐지 | ⭐⭐⭐⭐⭐ (필수) |
+
+#### Cumulative exfiltration detection
+사용자의 데이터 유출(exfiltration) 활동이 조직 내 평균 수준을 초과할 때 탐지
+➔ 예: 특정 사용자가 지난 30일간 다른 사용자 대비 비정상적으로 많은 파일을 공유/다운로드 했을 경우
+
+#### Risk score boosters
+정책 탐지 시 Risk score(위험 점수)를 추가로 높여주는 조건
+➔ 예: Confidential – Wandoo 라벨 문서 외부 전송을 탐지 시, 해당 사용자가 평소보다 많은 파일을 처리하면 위험도 우선 대응 가능
+
+<img width="952" alt="image" src="https://github.com/user-attachments/assets/8045f8c5-e708-48ac-85d6-571707a9fea0" />
+
+#### Indicator Threshold = 경고를 생성할 기준치로 MS 제공 기준을 그대로 사용
+예: ‘외부 메일 첨부 전송’이라는 Indicator가 있을 때, 하루에 몇 건 이상이면 risk score를 높일 것인지를 정함
+
+<img width="1410" alt="스크린샷 2025-06-29 오전 10 32 26" src="https://github.com/user-attachments/assets/ab9ac920-5315-4341-b780-80d47c99cf93" />
