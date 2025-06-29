@@ -16,8 +16,8 @@
 * [Auto-labeling](https://github.com/Kittiyayaong/ProjectWandooPurview/blob/main/Purview%20Module01%20-%2005.%20Auto-labeling.md)
 
 2. Module 02 - Data Loss Prevention
-* [Template-based DLP policy](https://github.com/Kittiyayaong/ProjectWandooPurview/blob/main/Purview%20Module02%20-%2001.%20%20Template-based%20Data%20Loss%20Prevention.md)
-* Endpoint DLP
+* [Template-based DLP Policy](https://github.com/Kittiyayaong/ProjectWandooPurview/blob/main/Purview%20Module02%20-%2001.%20%20Template-based%20Data%20Loss%20Prevention.md)
+* [Custom DLP Policy](https://github.com/Kittiyayaong/ProjectWandooPurview/blob/main/Purview%20Module02%20-%2002.%20Custom%20Data%20Loss%20Prevention%20Policy.md)
 
 3. Module 03 - Insider Risk Management
 * IRM
