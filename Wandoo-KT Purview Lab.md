@@ -13,7 +13,7 @@
 
 ## ✅ **1. 사전 준비 (Pre-requisites)**
 
-### 🔹 **(1) 사용자 계정**
+### **(1) 사용자 계정**
 
 | 역할 | 계정 예시 | 설명 |
 |---|---|---|
@@ -26,7 +26,7 @@
 
 ---
 
-### 🔹 **(2) 그룹 생성 – Wandoo HR 그룹**
+### **(2) 그룹 생성 – Wandoo HR 그룹**
 
 1. Microsoft 365 admin center > Groups > Active groups > + Add a group
 2. **Type:** Microsoft 365
@@ -37,7 +37,7 @@
 
 ---
 
-### 🔹 **(3) Sensitivity Label 생성**
+### **(3) Sensitivity Label 생성**
 
 ✅ **Confidential – HR Info 라벨**
 
@@ -54,7 +54,7 @@
 
 ## ✅ **2. DLP Policy 생성**
 
-### 🔹 **목적:** HR Info 라벨 파일 외부 공유 차단 ➔ IRM Trigger
+### **목적:** HR Info 라벨 파일 외부 공유 차단 ➔ IRM Trigger
 
 1. **Purview > Data Loss Prevention > Policies > + Create policy**
 2. **Template:** Custom policy
@@ -93,7 +93,7 @@
 
 ## ✅ **4. 테스트 및 검증**
 
-### 🔎 **[Case 1] DLP 정책 검증**
+### **[Case 1] DLP 정책 검증**
 
 1. **hruser1 계정으로 로그인**
 2. OneDrive에서 새 파일 업로드 ➔ 수동으로 **Confidential – HR Info 라벨** 적용
@@ -106,7 +106,7 @@
 
 ---
 
-### 🔎 **[Case 2] IRM Trigger 검증**
+### **[Case 2] IRM Trigger 검증**
 
 1. **위 Case 1 공유 차단 시도 후**, 관리자로 Purview Portal 접속
 2. **Insider Risk Management > Alerts** 확인
@@ -127,7 +127,7 @@
 
 ---
 
-## 🔧 **6. 추가 Tips**
+## **6. 추가 Tips**
 
 - ✅ **Exception group**: 정책 제외 그룹 생성 가능 (예: Wandoo Security Exception)
 - ✅ **Priority content**: Sensitivity label 설정으로 탐지 범위 강화
