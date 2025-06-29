@@ -70,3 +70,5 @@ Communication Compliance Policy 생성 후 ➔ **Insider Risk Management > Mod3 
 
 * 생성한 Communication Compliance 선택하여 적용합니다. 
 <img width="1403" alt="image" src="https://github.com/user-attachments/assets/72bae653-26a0-4424-a96e-0df372cfb95e" />
+
+### 🔗 [다음 Lab으로 이동하기 »](https://github.com/Kittiyayaong/ProjectWandooPurview/blob/main/Wandoo-KT%20Purview%20Lab.md)
