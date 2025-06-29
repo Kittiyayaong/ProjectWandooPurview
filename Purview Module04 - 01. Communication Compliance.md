@@ -68,3 +68,5 @@ Communication Compliance Policy 생성 후 ➔ **Insider Risk Management > Mod3 
 
 <img width="1369" alt="image" src="https://github.com/user-attachments/assets/54aeadee-0d8b-4385-8d0b-213385a357e3" />
 
+* 생성한 Communication Compliance 선택하여 적용합니다. 
+<img width="1403" alt="image" src="https://github.com/user-attachments/assets/72bae653-26a0-4424-a96e-0df372cfb95e" />
