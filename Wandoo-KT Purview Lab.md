@@ -1,4 +1,4 @@
-# Purview Lab – Wandoo HR Group Confidential Info Protection (Single HR User Setup)
+<img width="972" alt="image" src="https://github.com/user-attachments/assets/7575ce82-1d67-4a77-9fde-cf8665b5fe97" /># Purview Lab – Wandoo HR Group Confidential Info Protection (Single HR User Setup)
 
 ## 시나리오 개요
 Wandoo-HR 그룹이 다루는 HR 기밀 정보(주민등록번호, 계좌정보 등)를 외부 공유/열람 시 차단하거나 제한하고, 내부 구성원만 접근 가능하도록 설정
@@ -92,12 +92,27 @@ Wandoo-HR 그룹이 다루는 HR 기밀 정보(주민등록번호, 계좌정보 
 4. **Locations:** OneDrive and SharePoint
 5. **Users:** Include ➔ `Wandoo-HR` 그룹
 6. **Conditions:**
-   - Content contains ➔ **Sensitivity label: Confidential – HR Info**
-7. **Actions:**
-   - Block external sharing
+
+<img width="969" alt="스크린샷 2025-06-29 오후 12 53 38" src="https://github.com/user-attachments/assets/3a7bc0b4-e466-4f2b-8555-62d75ad6b217" />
+<img width="958" alt="스크린샷 2025-06-29 오후 12 53 44" src="https://github.com/user-attachments/assets/9e0b267a-dd68-4742-8cb9-147b2da680d9" />
+
+
+   - Content contains
+     * Content is shared from Microsoft 365 only with people inside my organization
+     * and 조건으로, **Sensitivity label: Wandoo Confidential – HR Info**
+   - Sensitive Info types:
+     * Korea Physical Addresses
+     * South Korea Driver's License Number
+     * South Korea Passport Number
+     * South Korea Resident Registration Number
+     * Credit Card Number
+
+
+8. **Actions:**
+   - Block Only people outside your organization
    - User notification: On
-   - Admin alert: On (보안팀 이메일 추가 가능)
-8. **Review & Create**
+   - Admin alert: On (Site admin)
+9. **Review & Create**
 
 ---
 
