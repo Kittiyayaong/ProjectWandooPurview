@@ -242,15 +242,14 @@
 
 
 #### [Step 4] Policy mode
+| 설정                                                                                                | 효과                                                                              |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| **Run the policy in simulation mode + Turn the policy on if it’s not edited within fifteen days** | - 정책을 우선 시뮬레이션 모드로 실행<br>- 15일간 수정이 없으면 자동 Enforce<br>- 초기 테스트 + 자동 적용 시나리오에 적합 |
 
-- Turn the policy on immediately
 
-| ✅ **옵션**                                         | **의미**                                                                          | **활용 시점**                                        |
-| ------------------------------------------------ | ------------------------------------------------------------------------------- | ------------------------------------------------ |
-| **1. Run the policy in simulation mode**         | 정책을 테스트 모드로 실행하여, 조건에 매칭되는 항목만 모니터링하고 실제 차단/조치는 하지 않음                           | - 정책 조건과 Scope 검증<br>- 조직 영향 없이 Rule match 상황 파악 |
-| 🔹 **Show policy tips while in simulation mode** | Simulation mode 상태에서도 사용자에게 Policy Tip(알림) 표시 <br> **효과:** 사용자 인지 가능, 실제 차단은 없음 | - 사용자 교육 및 사전 안내 목적                              |
-| **2. Turn the policy on immediately**            | 정책을 즉시 활성화(Enforce)하여, 조건에 매칭되는 항목을 차단/조치                                       | - Shadow IT, AI Prompt 무단 사용 차단                          |
-| **3. Leave the policy turned off**               | 정책을 비활성화 상태로 둠 (저장만)                                                            | - 아직 정책을 적용할 준비가 안된 경우                           |
+> ⭐️ TipsShow policy tips while in simulation mode: 현재 비활성화됨 (체크 불가)
+> ➔ Data in browser activity 정책의 경우, Policy Tip 기능을 지원하지 않음
+> (M365 내부 서비스에서는 표시 가능하지만, 브라우저 activity DLP에는 표시 불가)
 
 ---
 
