@@ -21,7 +21,7 @@
 | **HR 사용자** | hruser1@tenant.onmicrosoft.com | Wandoo HR 담당자 |
 | **외부 테스트 계정** | externaltest@gmail.com | 외부 공유 차단 테스트 |
 
-🔧 **실습을 위해:**
+**실습을 위해:**
 - Microsoft 365 admin center > Users > Active users > + Add user 로 **hruser1** 생성
 
 ---
