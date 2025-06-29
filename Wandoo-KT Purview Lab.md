@@ -46,11 +46,16 @@ Wandoo-HR 그룹이 다루는 HR 기밀 정보(주민등록번호, 계좌정보 
    * Access content marking: `Wandoo-HR` Watermark 추가 
 6. **Auto-labeling:** Off (수동 테스트)
 7. **Group & Sites (Wandoo HR confidential data 를 외부 공유 차단 + 비인가 디바이스에서 접근 차단하여 보호)
-   1. Privacy and external user access: Private – Only members can access
-   2. External sharing and Conditional Access:
-      - Control external sharing from labeled SharePoint sites: 이 라벨이 적용된 SharePoint 사이트의 외부 공유 설정을 강제로 변경합니다. (기존 사이트의 외부 공유 정책을 무시하고 라벨 정책이 우선 적용됨)
-      - Use Microsoft Entra Conditional Access to protect labeled SharePoint sites: Conditional Access 정책을 SharePoint site level로 강제 적용.(외부 공유 차단뿐만 아니라, 비인가 디바이스에서의 접근도 제한하여 보안을 강화해야 하는 경우)
-      - ✔️ Block access 설정은 보안 강도 최고 수준으로, HR 기밀정보를 관리되지 않는 개인 PC, BYOD 환경에서 접근하지 못하도록 차단함.
+   1. Privacy and external user access:  `Private`– Only members can access
+   2. External sharing and Conditional Access:  
+      - Control external sharing from labeled SharePoint sites: `Only People in your Organizaiton`
+        : 이 라벨이 적용된 SharePoint 사이트의 외부 공유 설정을 강제로 변경합니다. (기존 사이트의 외부 공유 정책을 무시하고 라벨 정책이 우선 적용됨)
+      - Use Microsoft Entra Conditional Access to protect labeled SharePoint sites: `Block access`
+        : Conditional Access 정책을 SharePoint site level로 강제 적용.(외부 공유 차단뿐만 아니라, 비인가 디바이스에서의 접근도 제한하여 보안을 강화해야 하는 경우)
+
+> ⭐️ Block access 
+>
+> 설정은 보안 강도 최고 수준으로, HR 기밀정보를 관리되지 않는 개인 PC, BYOD 환경에서 접근하지 못하도록 차단함.
 
 > ⚠️ 주의 사항
 >
