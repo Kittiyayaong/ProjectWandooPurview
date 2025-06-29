@@ -1,4 +1,4 @@
-<img width="972" alt="image" src="https://github.com/user-attachments/assets/7575ce82-1d67-4a77-9fde-cf8665b5fe97" /># Purview Lab – Wandoo HR Group Confidential Info Protection (Single HR User Setup)
+# Purview Lab – Wandoo HR Group Confidential Info Protection (Single HR User Setup)
 
 ## 시나리오 개요
 Wandoo-HR 그룹이 다루는 HR 기밀 정보(주민등록번호, 계좌정보 등)를 외부 공유/열람 시 차단하거나 제한하고, 내부 구성원만 접근 가능하도록 설정
@@ -98,7 +98,7 @@ Wandoo-HR 그룹이 다루는 HR 기밀 정보(주민등록번호, 계좌정보 
 
 
    - Content contains
-     * Content is shared from Microsoft 365 only with people inside my organization
+     * 첫 번째 조건으로 **“Content is shared with people outside your organization”** 추가 (필수)
      * and 조건으로, **Sensitivity label: Wandoo Confidential – HR Info**
    - Sensitive Info types:
      * Korea Physical Addresses
@@ -109,9 +109,10 @@ Wandoo-HR 그룹이 다루는 HR 기밀 정보(주민등록번호, 계좌정보 
 
 
 8. **Actions:**
-   - Block Only people outside your organization
-   - User notification: On
-   - Admin alert: On (Site admin)
+   - Action type: Block Only people outside your organization
+   - User notification: on (Block 조건 사용을 위해 필수)
+     * Tip Text: 햔재 공유하려는 파일은 “Confidential – HR Info” 라벨이 지정된 기밀 HR 정보입니다. 회사 정책상 기밀 HR 데이터를 외부로 공유하는 것은 허용되지 않습니다. 문의: security@contoso.com
+   - **NotifyUser 파라미터**: 위 action이 작동하기 위해서는 **User notification** 설정이 필수
 9. **Review & Create**
 
 ---
