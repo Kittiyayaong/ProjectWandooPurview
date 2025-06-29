@@ -46,6 +46,17 @@
    - **Policy Name:** `Confidential HR Info Label Policy`
    - **Publish to:** `Wandoo-HR` 그룹
 
+> ⭐️ **Notes**
+> “Confidential – HR Info 라벨을 파일에 적용 ➔ 외부 공유 차단 ➔ IRM Trigger”
+
+> ⭐️ Groups & Sites scope가 필요한 경우
+> SharePoint 사이트 자체 또는 Teams 채널 전체를 Confidential 그룹/사이트로 분류하고
+> 게스트 접근 제한, 외부 공유 차단, unmanaged device 차단 등의 컨테이너 단위 보호를 적용하려는 경우.
+>
+> 예시:
+> HR팀 SharePoint 사이트 전체에 Confidential 라벨 적용 ➔ 게스트 접근 자동 차단
+> Teams HR 채널을 Confidential로 설정 ➔ 외부 사용자 초대 불가
+
 ---
 
 ## ✅ **2. DLP Policy 생성**
