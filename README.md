@@ -6,6 +6,8 @@
 ## :thinking: 사전 요구 사항 (필요 도구)
 * [Container SL 설정을 위한 사전작업](https://github.com/Kittiyayaong/ProjectWandooPurview/blob/main/Purview%20Lab%20%EC%82%AC%EC%A0%84%20%EC%A4%80%EB%B9%84%EC%82%AC%ED%95%AD.md)
 
+### 🔗 [Lab으로 시작하기 »](https://github.com/Kittiyayaong/ProjectWandooPurview/blob/main/Purview%20Lab%20%EC%82%AC%EC%A0%84%20%EC%A4%80%EB%B9%84%EC%82%AC%ED%95%AD.md)
+
 ## :test_tube: 실습 순서
 
 1. Module 01 - Information Protection
