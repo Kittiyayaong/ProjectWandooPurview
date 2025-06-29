@@ -20,7 +20,7 @@
 * [Custom DLP Policy](https://github.com/Kittiyayaong/ProjectWandooPurview/blob/main/Purview%20Module02%20-%2002.%20Custom%20Data%20Loss%20Prevention%20Policy.md)
 
 3. Module 03 - Insider Risk Management
-* IRM
+* [IRM](https://github.com/Kittiyayaong/ProjectWandooPurview/blob/main/Purview%20Module03%20-%2001.%20Insider%20Risk%20Management%20(IRM).md)
 * Adaptive protection
 
 4. Other Purview Features
