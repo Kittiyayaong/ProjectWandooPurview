@@ -3,6 +3,7 @@
 ## Purview Lab – Wandoo HR Group Confidential Info Protection (Single HR User Setup)
 
 ## 시나리오 개요
+Wandoo-HR 그룹이 다루는 HR 기밀 정보(주민등록번호, 계좌정보 등)를 외부 공유/열람 시 차단하거나 제한하고, 내부 구성원만 접근 가능하도록 설정
 
 > **목표**  
 > Wandoo HR 그룹 소속 사용자(hruser1)가 **Confidential – HR Info 라벨**이 붙은 파일을  
@@ -39,10 +40,29 @@
 
 1. **Purview Portal > Information Protection > Labels > + Create a label**
 2. **Name:** `Confidential – HR Info`
-3. **Scope:** Files & Emails
-4. **Encryption:** Optional (테스트 목적 Off 가능)
-5. **Auto-labeling:** Off (수동 테스트)
-6. **Publish Label**
+3. **Scope:** Files & Emails, Groups & Sites
+4. **Item**:
+   * Control Access: `Wandoo-HR`
+   * Access content marking: `Wandoo-HR` Watermark 추가 
+6. **Auto-labeling:** Off (수동 테스트)
+7. **Group & Sites (Wandoo HR confidential data 를 외부 공유 차단 + 비인가 디바이스에서 접근 차단하여 보호)
+   1. Privacy and external user access: Private – Only members can access
+   2. External sharing and Conditional Access:
+      - Control external sharing from labeled SharePoint sites: 이 라벨이 적용된 SharePoint 사이트의 외부 공유 설정을 강제로 변경합니다. (기존 사이트의 외부 공유 정책을 무시하고 라벨 정책이 우선 적용됨)
+      - Use Microsoft Entra Conditional Access to protect labeled SharePoint sites: Conditional Access 정책을 SharePoint site level로 강제 적용.(외부 공유 차단뿐만 아니라, 비인가 디바이스에서의 접근도 제한하여 보안을 강화해야 하는 경우)
+      - ✔️ Block access 설정은 보안 강도 최고 수준으로, HR 기밀정보를 관리되지 않는 개인 PC, BYOD 환경에서 접근하지 못하도록 차단함.
+
+> ⚠️ 주의 사항
+>
+> 해당 설정은 SharePoint Admin Center > Access control > Unmanaged devices에서 Allow 또는 Limited access 대신 Block으로 설정되어 있어야 완전히 작동합니다.
+>
+> 또한 Entra Conditional Access 정책을 구성해야 실효성이 있습니다. (화면에 ‘There aren’t any authentication contexts configured’ 라는 메시지가 보임 → Authentication context를 먼저 생성 필요.)
+
+
+   3. 
+
+
+9. **Publish Label**
    - **Policy Name:** `Confidential HR Info Label Policy`
    - **Publish to:** `Wandoo-HR` 그룹
 
@@ -50,10 +70,12 @@
 > “Confidential – HR Info 라벨을 파일에 적용 ➔ 외부 공유 차단 ➔ IRM Trigger”
 
 > ⭐️ Groups & Sites scope가 필요한 경우
+> 
 > SharePoint 사이트 자체 또는 Teams 채널 전체를 Confidential 그룹/사이트로 분류하고
 > 게스트 접근 제한, 외부 공유 차단, unmanaged device 차단 등의 컨테이너 단위 보호를 적용하려는 경우.
 >
 > 예시:
+> 
 > HR팀 SharePoint 사이트 전체에 Confidential 라벨 적용 ➔ 게스트 접근 자동 차단
 > Teams HR 채널을 Confidential로 설정 ➔ 외부 사용자 초대 불가
 
