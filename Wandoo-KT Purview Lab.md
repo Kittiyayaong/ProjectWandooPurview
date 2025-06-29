@@ -1,21 +1,21 @@
 # Wandoo-KT를 위한 purview 셀프 랩 시나리오 
 
-# Purview Lab – Sensitivity Label + IRM + DLP Policy
+## Purview Lab – Sensitivity Label + IRM + DLP Policy
 
-## 🎯 시나리오
+### 시나리오
 
 “Confidential 라벨이 적용된 문서를 OneDrive 또는 SharePoint에서 다운로드 시 Risk alert 생성 ➔ DLP 정책으로 외부 공유 차단”
 
 ---
 
-## ✅ 목적
+### ✅ 목적
 
 1. **IRM 정책**: Confidential 라벨 파일 다운로드 탐지 ➔ Risk Alert 생성  
 2. **DLP 정책**: Confidential 파일의 외부 공유 차단
 
 ---
 
-### #### [Step 0] 사전 준비
+#### [Step 0] 사전 준비
 
 - Microsoft Purview Portal 접속: [compliance.microsoft.com](https://compliance.microsoft.com)
 - 테스트 사용자 계정 준비
@@ -23,7 +23,7 @@
 
 ---
 
-### #### [Step 1] Sensitivity Label 생성
+#### [Step 1] Sensitivity Label 생성
 
 1. **Information Protection > Labels > + Create a label**
 2. **Name:** `Confidential - Lab`
@@ -36,7 +36,7 @@
 
 ---
 
-### #### [Step 2] DLP Policy 생성 (외부 공유 차단)
+#### [Step 2] DLP Policy 생성 (외부 공유 차단)
 
 1. **Data Loss Prevention > Policies > + Create policy**
 2. **Template:** Custom policy
@@ -52,7 +52,7 @@
 
 ---
 
-### #### [Step 3] IRM Policy 생성 (다운로드 Risk alert)
+#### [Step 3] IRM Policy 생성 (다운로드 Risk alert)
 
 1. **Insider Risk Management > Policies > + Create policy**
 2. **Template:** Data leaks by risky users
@@ -67,7 +67,7 @@
 
 ---
 
-### #### [Step 4] 테스트
+#### [Step 4] 테스트
 
 1. 테스트 사용자 계정으로 **Confidential - Lab 라벨 적용 파일** OneDrive 업로드
 2. 같은 계정으로 파일 다운로드 ➔ **IRM Alert 생성** 확인
