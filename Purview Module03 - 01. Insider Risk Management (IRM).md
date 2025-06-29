@@ -159,3 +159,5 @@ Insider Risk Policy에서 트리거(trigger)는 ‘이 정책의 감시를 시�
 예: ‘외부 메일 첨부 전송’이라는 Indicator가 있을 때, 하루에 몇 건 이상이면 risk score를 높일 것인지를 정함
 
 <img width="1410" alt="스크린샷 2025-06-29 오전 10 32 26" src="https://github.com/user-attachments/assets/ab9ac920-5315-4341-b780-80d47c99cf93" />
+
+### 🔗 [다음 Lab으로 이동하기 »](https://github.com/Kittiyayaong/ProjectWandooPurview/blob/main/Purview%20Module04%20-%2001.%20Communication%20Compliance.md)
