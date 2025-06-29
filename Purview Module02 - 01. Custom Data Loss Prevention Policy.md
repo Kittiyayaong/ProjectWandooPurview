@@ -16,8 +16,6 @@
 - Teams 채팅, 채널 메시지에 **고객 개인정보, 기밀 데이터, 소스코드** 입력/공유 방지
 - 내부 협업 중 **불필요한 민감정보 노출 차단**
 
----
-
 ### 정책 구성 방법
 
 #### [Step 1] 정책 생성
@@ -31,8 +29,6 @@
 
 <img width="1419" alt="image" src="https://github.com/user-attachments/assets/01b9db6b-139d-4f9f-8160-36c503edf542" />
 
----
-
 #### [Step 2] Name/ Admin/ Locations 지정
 
 1. Name: Wandoo - Teams Prompt Data Protection
@@ -43,8 +39,6 @@
 3. **Teams chat and channel messages*** 설정
 
 <img width="1421" alt="image" src="https://github.com/user-attachments/assets/4d676c3e-af6b-4e8c-9ca3-06064ba32b2b" />
-
----
 
 #### [Step 4] Policy rule 설정
 
@@ -87,7 +81,6 @@
 
 <img width="969" alt="스크린샷 2025-06-29 오전 8 41 36" src="https://github.com/user-attachments/assets/844f13e3-c7ac-47a9-96f0-49f7380510cc" />
 
----
 
 #### [Step 5] Policy mode
 - Run in simulation mode + Show policy tips로 설정 
