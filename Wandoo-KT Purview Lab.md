@@ -13,7 +13,7 @@
 
 ## ✅ **1. 사전 준비 (Pre-requisites)**
 ### **(1) 사용자 계정**
-[Microsoft Entra admin center](https://entra.microsoft.com) > Users > All users > + New user 로 **hruser1** 생성
+   [Microsoft Entra admin center](https://entra.microsoft.com) > Users > All users > + New user 로 **hruser1** 생성
 
 ### **(2) 그룹 생성 – Wandoo HR 그룹**
 
@@ -26,10 +26,10 @@
 
 ---
 
-✅ **Notes**
-
-- Entra ID에서 생성된 사용자/그룹은 **Microsoft 365 admin center와 실시간 동기화**됩니다.
-- 그룹 생성 시 **Group type을 Microsoft 365로 선택**해야 Teams, SharePoint, DLP policy 대상 그룹으로 사용 가능합니다.
+> ⭐️ **Notes**
+> 
+> - Entra ID에서 생성된 사용자/그룹은 **Microsoft 365 admin center와 실시간 동기화**됩니다.
+> - 그룹 생성 시 **Group type을 Microsoft 365로 선택**해야 Teams, SharePoint, DLP policy 대상 그룹으로 사용 가능합니다.
 
 ---
 
