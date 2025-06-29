@@ -1,4 +1,4 @@
-<img width="1552" alt="image" src="https://github.com/user-attachments/assets/2eed536f-3d31-46d9-896d-140e5876c90d" /># Purview Module 04 - Other Purview Features
+# Purview Module 04 - Other Purview Features
 
 ## Lab 1. Communication Compliance
 
@@ -65,4 +65,6 @@ Communication Compliance Policy 생성 후 ➔ **Insider Risk Management > Mod3 
 
 ✅ **Inappropriate messages detected by Communication Compliance** 선택  
 ➔ **Offensive language 탐지 시 IRM 정책 발동 ➔ Risk Score 할당 ➔ Adaptive Protection Enforcement 연계**
+
+<img width="1369" alt="image" src="https://github.com/user-attachments/assets/54aeadee-0d8b-4385-8d0b-213385a357e3" />
 
