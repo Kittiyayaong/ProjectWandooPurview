@@ -22,7 +22,7 @@
 | **외부 테스트 계정** | externaltest@gmail.com | 외부 공유 차단 테스트 |
 
 **실습을 위해:**
-- Microsoft 365 admin center > Users > Active users > + Add user 로 **hruser1** 생성
+- [Microsoft 365 admin center](https://admin.microsoft.com) > Users > Active users > + Add user 로 **hruser1** 생성
 
 ---
 
