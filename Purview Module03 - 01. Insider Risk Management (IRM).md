@@ -5,6 +5,7 @@
 ### 시나리오 
 - **Confidential – Wandoo 라벨**이 적용된 문서를
   - 외부로 메일 전송 시 **Risk alert 생성**
+  - 특정 그룹(Wandoo-Security) 예외
   - 민감정보(Sensitive Info Types) 탐지 시 관리자 승인 및 알림
  
 
@@ -17,9 +18,10 @@ Purview console > Solutions > Insider Risk Management > Policies > + Create poli
 
 1. Name: Wandoo – Confidential External Email IRM
 2. Description: Detects external email of Confidential – Wandoo labeled files with sensitive info
-3. User: All 
-
-<img width="1436" alt="스크린샷 2025-06-29 오전 9 42 52" src="https://github.com/user-attachments/assets/4da0bc5f-9bc7-41e7-9d92-2b5e74ee90e1" />
+3. User: All
+4. Exception: **Wandoo-security** group 추가
+   
+<img width="1397" alt="image" src="https://github.com/user-attachments/assets/512fc450-1307-461a-afbd-6e7649ce0de9" />
 
 #### [Step 3] 우선순위 설정
 
@@ -105,21 +107,27 @@ Insider Risk Policy에서 트리거(trigger)는 ‘이 정책의 감시를 시�
 
 #### [Step 4] Indicator 설정
 
+##### IRM 정책의 Alert 생성 원리
+1. 트리거(Triggering event) 발생 → 정책 활성화 (ex. 부서 이동, 퇴사 예정, Communication compliance 등)
+2. Indicator 조건 충족 → Risk score 할당
+3. Threshold 초과 시 → Alert → Investigation → Response
+
+##### Indicator: 	IRM 정책이 Risk alert를 생성하기 위한 ‘행동 이벤트 조건’ 
+
+> ⭐️ 해당 부분이 붉은색으로 되어있으면, 클릭 후 활성화 
 <img width="793" alt="image" src="https://github.com/user-attachments/assets/779662ee-5159-4666-8683-f882b7723777" />
-해당 부분이 붉은색으로 되어있으면, 클릭 후 활성화 
 
-Office indicators
+| ✅ **구분** | **Indicator 이름** | **설명 / 목적** |
+| --- | --- | --- |
+| 🔴 **필수 (시나리오 핵심)** | Sending email with attachments to recipients outside the organization | Confidential 라벨 문서를 외부로 메일 전송 시 탐지 및 Risk Alert 생성 |
+| 🟠 **강력 추천 (유출 우회 경로 차단)** | Removing sensitivity labels from files | 라벨 제거를 통한 보호 해제 시도 탐지 |
+|  | Downgrading sensitivity labels applied to files | 라벨 보안 레벨 하향 변경 시 탐지 |
+|  | Accessing sensitive or priority SharePoint files | 기밀 문서 열람/접근 탐지 |
+|  | Downloading content from SharePoint / OneDrive | 기밀 파일 다운로드 후 재업로드/전송 시도 탐지 |
+| 🟢 **옵션 (추가 보안)** | Sending email with attachments to free public domains | Gmail, Naver 등 개인 메일 전송 탐지 |
+|  | Sending email with attachments to self | 개인 계정으로 전송 탐지 |
+|  | Sharing SharePoint files/folders/sites externally | SharePoint 문서, 폴더, 사이트 외부 공유 탐지 |
 
-Email sent externally (외부 이메일 전송)
-
-File shared externally (필요 시)
-
-Microsoft Defender for Cloud Apps indicators
-
-Exchange Online: Mail sent externally
-
-Cloud storage indicators
-
-(추후 OneDrive/SharePoint 연동 정책 필요 시 선택)
-
-
+위 Indicators 는 메일 외부 전송 뿐 아니라 우회 경로까지 탐지 가능 하므로, 이번 랩에서 설정 후 알림/리스크 스코어링 흐름을 확인하는 것을 권장합니다.
+* 파일 다운로드 → 재업로드
+* 라벨 제거 → 공유
