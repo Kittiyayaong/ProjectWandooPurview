@@ -39,7 +39,7 @@ Wandoo-HR 그룹이 다루는 HR 기밀 정보(주민등록번호, 계좌정보 
 ✅ **Confidential – HR Info 라벨**
 
 1. **Purview Portal > Information Protection > Labels > + Create a label**
-2. **Name:** `Confidential – HR Info`
+2. **Name:** `Wandoo Confidential – HR Info`
 3. **Scope:** Files & Emails, Groups & Sites
 4. **Item**:
    * Control Access: `Wandoo-HR`
@@ -62,14 +62,12 @@ Wandoo-HR 그룹이 다루는 HR 기밀 정보(주민등록번호, 계좌정보 
 > 해당 설정은 SharePoint Admin Center > Access control > Unmanaged devices에서 Allow 또는 Limited access 대신 Block으로 설정되어 있어야 완전히 작동합니다.
 >
 > 또한 Entra Conditional Access 정책을 구성해야 실효성이 있습니다. (화면에 ‘There aren’t any authentication contexts configured’ 라는 메시지가 보임 → Authentication context를 먼저 생성 필요.)
-
-
-   3. 
-
-
-9. **Publish Label**
-   - **Policy Name:** `Confidential HR Info Label Policy`
+ 
+8. **Publish Label**
+   - **Policy Setting**: Users must provide a justification to remove a label or lower its classification ➔ Confidential – HR Info 라벨 제거/다운그레이드 시 사유를 남겨, IRM audit 및 DLP 조건 회피 방지.
+   - **Policy Name:** `Wandoo Confidential HR Info Label Policy`
    - **Publish to:** `Wandoo-HR` 그룹
+   - **Sites & Groups**: HR 전용 SharePoint 사이트 자동 라벨링 목적
 
 > ⭐️ **Notes**
 > “Confidential – HR Info 라벨을 파일에 적용 ➔ 외부 공유 차단 ➔ IRM Trigger”
