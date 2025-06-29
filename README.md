@@ -24,7 +24,7 @@
 * Adaptive protection
 
 4. Other Purview Features
-* Connector SDK
 * Communication Compliance
+* Connector SDK
 * Data Lifecycle management
 * Data Map
