@@ -96,7 +96,7 @@ Purview console > Solutions > Insider Risk Management > Policies > + Create poli
 본 랩에서는 우선 **Get alerts for all activity** 선택하여 탐지 범위 넓히는 설정 진행 
 
 6. Trigger
-Insider Risk Policy에서 트리거(trigger)는 ‘이 정책의 감시를 시작해야 하는 시점’을 결정하는 이벤트 입니다. IRM 정책은 Scope(대상 사용자) 에 포함된 사람 모두를 항상 감시하는 것이 아니기 떄문에,반드시 Triggering Event(트리거 이벤트)가 발생해야 합니다. 이번 설정은 Module 4에서 **HR Connector** 생성 후 선택하여 진행합니다. 
+Insider Risk Policy에서 트리거(trigger)는 ‘이 정책의 감시를 시작해야 하는 시점’을 결정하는 이벤트 입니다. IRM 정책은 Scope(대상 사용자) 에 포함된 사람 모두를 항상 감시하는 것이 아니기 떄문에,반드시 Triggering Event(트리거 이벤트)가 발생해야 합니다. 이번 설정은 Module 4에서 **Communication Compliance** 생성 후 선택하여 진행합니다. 
 
 | 트리거 옵션                                                          | 설명                                            | 현재 상태  | 활성화 조건                              |
 | --------------------------------------------------------------- | --------------------------------------------- | ------ | ----------------------------------- |
