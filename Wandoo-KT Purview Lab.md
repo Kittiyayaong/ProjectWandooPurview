@@ -126,13 +126,13 @@ Wandoo-HR 그룹이 다루는 HR 기밀 정보(주민등록번호, 계좌정보 
 3. **Name:** `Wandoo – HR Confidential Data Leak Monitoring`
 4. **Users:** `Wandoo-HR` 그룹
 5. **Priority content:**
-   - Sensitivity label ➔ `Confidential – HR Info`
+   - Sensitivity label ➔ `Wandoo Confidential – HR Info`
 6. **Indicators:**
    - Download from SharePoint or OneDrive
    - Sending email with attachments externally
 7. **Scoring:** Get alerts for all activity
 8. **Triggering events:**
-   - ✅ Data loss prevention (DLP) policy match
+   - ✅ Data loss prevention (DLP) policy match (이번 랩에서는 license 부족으로 제공 불가) 
 9. **Review & Create**
 
 ---
