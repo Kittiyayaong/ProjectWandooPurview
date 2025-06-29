@@ -40,7 +40,7 @@
 
 <img width="1421" alt="image" src="https://github.com/user-attachments/assets/4d676c3e-af6b-4e8c-9ca3-06064ba32b2b" />
 
-#### [Step 4] Policy rule 설정
+#### [Step 3] Policy rule 설정
 
 <img width="1391" alt="스크린샷 2025-06-29 오전 8 30 52" src="https://github.com/user-attachments/assets/bcb16b76-c989-46e3-82f8-01840eacaadf" />
 
@@ -82,7 +82,7 @@
 <img width="969" alt="스크린샷 2025-06-29 오전 8 41 36" src="https://github.com/user-attachments/assets/844f13e3-c7ac-47a9-96f0-49f7380510cc" />
 
 
-#### [Step 5] Policy mode
+#### [Step 4] Policy mode
 - Run in simulation mode + Show policy tips로 설정 
 
 | ✅ **옵션**                                         | **의미**                                                                          | **활용 시점**                                        |
@@ -117,7 +117,7 @@
 2. Admin: Full directory(Default) 유지
 3. Location: Microsoft 365 Copilot (preview)
 
-#### [Step 4] Policy rule 설정
+#### [Step 3] Policy rule 설정
 
  **Condition**
   - Content contains: Sensitive info types
