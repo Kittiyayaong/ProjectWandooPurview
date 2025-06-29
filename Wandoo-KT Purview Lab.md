@@ -12,28 +12,24 @@
 ---
 
 ## ✅ **1. 사전 준비 (Pre-requisites)**
-
 ### **(1) 사용자 계정**
-
-| 역할 | 계정 예시 | 설명 |
-|---|---|---|
-| **관리자** | admin@tenant.onmicrosoft.com | Global + Compliance Admin 권한 |
-| **HR 사용자** | hruser1@tenant.onmicrosoft.com | Wandoo HR 담당자 |
-| **외부 테스트 계정** | externaltest@gmail.com | 외부 공유 차단 테스트 |
-
-**실습을 위해:**
-- [Microsoft 365 admin center](https://admin.microsoft.com) > Users > Active users > + Add user 로 **hruser1** 생성
-
----
+[Microsoft Entra admin center](https://entra.microsoft.com) > Users > All users > + New user 로 **hruser1** 생성
 
 ### **(2) 그룹 생성 – Wandoo HR 그룹**
 
-1. Microsoft 365 admin center > Groups > Active groups > + Add a group
-2. **Type:** Microsoft 365
-3. **Name:** `Wandoo-HR`
-4. **Description:** Wandoo HR test group
+1. [Microsoft Entra admin center](https://entra.microsoft.com) > Groups > All groups > + New group
+2. **Group type:** Microsoft 365
+3. **Group name:** `Wandoo-HR`
+4. **Group description:** Wandoo HR test group
 5. **Members:** hruser1 추가
-6. **Finish**
+6. **Create**
+
+---
+
+✅ **Notes**
+
+- Entra ID에서 생성된 사용자/그룹은 **Microsoft 365 admin center와 실시간 동기화**됩니다.
+- 그룹 생성 시 **Group type을 Microsoft 365로 선택**해야 Teams, SharePoint, DLP policy 대상 그룹으로 사용 가능합니다.
 
 ---
 
