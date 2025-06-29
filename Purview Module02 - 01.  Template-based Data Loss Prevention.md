@@ -106,4 +106,4 @@ Override는 DLP(Data Loss Prevention) 정책에서 특정 조건이 충족되었
 
 ![image](https://github.com/user-attachments/assets/c9d3d418-5439-4ef8-a990-5a490a7be12e)
 
-### 🔗 [다음 Lab으로 이동하기 »]()
+### 🔗 [다음 Lab으로 이동하기 »](https://github.com/Kittiyayaong/ProjectWandooPurview/blob/main/Purview%20Module02%20-%2002.%20Custom%20Data%20Loss%20Prevention%20Policy.md)
