@@ -1,6 +1,4 @@
-# Wandoo-KT를 위한 purview 셀프 랩 시나리오 
-
-## Purview Lab – Wandoo HR Group Confidential Info Protection (Single HR User Setup)
+# Purview Lab – Wandoo HR Group Confidential Info Protection (Single HR User Setup)
 
 ## 시나리오 개요
 Wandoo-HR 그룹이 다루는 HR 기밀 정보(주민등록번호, 계좌정보 등)를 외부 공유/열람 시 차단하거나 제한하고, 내부 구성원만 접근 가능하도록 설정
