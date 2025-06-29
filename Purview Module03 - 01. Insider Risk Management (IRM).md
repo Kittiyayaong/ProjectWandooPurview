@@ -81,3 +81,17 @@ Purview console > Solutions > Insider Risk Management > Policies > + Create poli
 > ⭐️ Tips. 권장 설정 시나리오
 > - 주민등록번호, 여권번호 등 **법적 규제 대상 민감정보** 유출을 우선 탐지해야 할 경우
 > - 예시: 주민등록번호 + 여권번호 + 신용카드번호 선택 ➔ 해당 정보가 포함된 콘텐츠의 활동(Event) 발생 시 **높은 Risk Score** 계산 ➔ 즉시 보안팀 대응 가능
+
+5. Scoring
+이 정책에서 탐지된 모든 활동에 대해 Risk Score를 계산할지, 아니면 Priority Content(우선순위 지정 콘텐츠) 가 포함된 활동만 점수 계산 및 Alert 생성할지를 결정.
+
+<img width="1415" alt="image" src="https://github.com/user-attachments/assets/9c24c1e6-bd00-4ad5-88bf-d749f1579087" />
+
+| 옵션                                                                | 설명                                                                                                                                                      | 권장 시나리오                                                        |
+| ----------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
+| **① Get alerts for all activity**                                 | ➔ 모든 탐지된 활동에 대해 Risk Score 부여 및 Alert 생성<br>- Priority content 포함 여부 관계없이<br>- 더 많은 Alert 발생 가능                                                         | ✅ **초기 모니터링 단계**<br>위험 사용자의 전반적 활동 패턴 파악 필요 시                  |
+| **② Get alerts only for activity that includes priority content** | ➔ Priority content(SharePoint sites, Sensitivity labels, Sensitive info types 등) 포함 활동만 Risk Score 계산 및 Alert 생성<br>- Priority content가 없는 활동은 점수 계산 제외 | ✅ **운영 안정화 단계**<br>중요 콘텐츠 관련 유출/위험만 탐지해 false positive 감소 목표 시 |
+
+본 랩에서는 우선 **Get alerts for all activity** 선택하여 탐지 범위 넓히는 설정 진행 
+
+
