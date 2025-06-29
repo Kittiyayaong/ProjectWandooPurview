@@ -3,6 +3,18 @@
 ### 라벨 설정을 위한 사전 작업 
 Microsoft Purview에서 Microsoft 365 Groups, Teams, SharePoint 사이트에 민감도 라벨(Sensitivity Label)을 적용하기 위해, Entra ID 테넌트에 EnableMIPLabels 설정을 활성화하는 작업을 수행합니다.
 
+| 구분 | 설명 |
+|--|--|
+| **기본 상태** | 민감도 라벨은 파일과 이메일에만 적용 가능 |
+| **EnableMIPLabels 활성화 후** | Teams, Microsoft 365 그룹, SharePoint 사이트 같은 **컨테이너 리소스에도 라벨 적용 가능** |
+
+### **활성화 전후 비교**
+
+| 구분 | EnableMIPLabels 비활성화 | EnableMIPLabels 활성화 후 |
+|--|--|--|
+| **라벨 적용 대상** | 파일, 이메일 | 파일, 이메일, **Teams, M365 그룹, SharePoint 사이트** |
+| **보안 정책 범위** | 문서 단위 | 팀/그룹/사이트 단위 |
+
 ---
 
 ## ✅ Windows 
