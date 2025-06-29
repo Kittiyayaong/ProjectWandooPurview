@@ -1,6 +1,6 @@
 # Purview Module 03 - Insider Risk Management
 
-## Lab 1. Insider Risk Management (IRM).md
+## Lab 1. Insider Risk Management (IRM)
 
 ### 시나리오 
 - **Confidential – Wandoo 라벨**이 적용된 문서를
