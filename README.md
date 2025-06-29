@@ -24,7 +24,7 @@
 * Adaptive protection
 
 4. Other Purview Features
-* Communication Compliance
+* [Communication Compliance](https://github.com/Kittiyayaong/ProjectWandooPurview/blob/main/Purview%20Module04%20-%2001.%20Communication%20Compliance.md)
 * Connector SDK
 * Data Lifecycle management
 * Data Map
