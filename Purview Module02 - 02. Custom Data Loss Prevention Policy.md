@@ -265,3 +265,5 @@
 >   | Microsoft Edge | ✅ 필수 | MDCA + Edge 통합 필요 |
 >   | MDCA 라이선스 | ✅ 필수 | Microsoft 365 E5 / Microsoft Defender for Cloud Apps |
 >   | Endpoint DLP | ❌ 선택 | 브라우저 기반 외 로컬 데이터 보호 용도로 병행 권장 |
+
+### 🔗 [다음 Lab으로 이동하기 »](https://github.com/Kittiyayaong/ProjectWandooPurview/blob/main/Purview%20Module03%20-%2001.%20Insider%20Risk%20Management%20(IRM).md)
