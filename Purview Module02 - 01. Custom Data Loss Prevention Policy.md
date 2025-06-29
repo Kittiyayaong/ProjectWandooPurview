@@ -137,3 +137,132 @@
     ```
     🚫 Wandoo Security: Copilot Prompt에 민감정보(주민등록번호, 여권번호, 카드번호 등) 입력이 탐지되었습니다. AI 처리 전 반드시 제거하세요.
     ```
+
+#### [Step 4] Policy mode
+- Run in simulation mode + Show policy tips로 설정 
+
+| ✅ **옵션**                                         | **의미**                                                                          | **활용 시점**                                        |
+| ------------------------------------------------ | ------------------------------------------------------------------------------- | ------------------------------------------------ |
+| **1. Run the policy in simulation mode**         | 정책을 테스트 모드로 실행하여, 조건에 매칭되는 항목만 모니터링하고 실제 차단/조치는 하지 않음                           | - 정책 조건과 Scope 검증<br>- 조직 영향 없이 Rule match 상황 파악 |
+| 🔹 **Show policy tips while in simulation mode** | Simulation mode 상태에서도 사용자에게 Policy Tip(알림) 표시 <br> **효과:** 사용자 인지 가능, 실제 차단은 없음 | - 사용자 교육 및 사전 안내 목적                              |
+| **2. Turn the policy on immediately**            | 정책을 즉시 활성화(Enforce)하여, 조건에 매칭되는 항목을 차단/조치                                       | - 테스트 완료 후, 실제 보호 적용 시                           |
+| **3. Leave the policy turned off**               | 정책을 비활성화 상태로 둠 (저장만)                                                            | - 아직 정책을 적용할 준비가 안된 경우                           |
+
+
+- 그 외 설정
+
+| 항목                     | 권장 설정                                                                                   |
+| ---------------------- | --------------------------------------------------------------------------------------- |
+| **User overrides**     | Off (Override 허용하지 않음)                                                                  |
+| **Incident reports**   | Severity level = High<br>Send alert to admins = On<br>Add security team email if needed |
+
+---
+
+## 3️⃣ ChatGPT (외부 AI) Prompt 보호
+
+### 적용 시나리오
+
+- ChatGPT, Bard, Claude 등 **외부 AI 서비스 Prompt에 고객 개인정보, 기밀 데이터, 소스코드** 입력 방지
+- Shadow IT 형태의 외부 AI 서비스 사용으로 인한 **데이터 무단 전송 리스크 차단**
+
+### 정책 구성 방법
+
+#### [Step 1] 정책 생성
+
+1. Microsoft Purview > **Data Loss Prevention** > Policies > **Create policy**
+2. **Data in browser activity** 선택  
+   (Microsoft Defender for Cloud Apps + Edge 통합을 통해 브라우저 기반 SaaS 활동 보호)
+3. **Custom policy** 선택
+
+
+#### [Step 2] Name/ Admin/ Locations 지정
+
+1. Name: **Wandoo - ChatGPT Prompt Data Protection**
+2. Admin: Full directory(Default) 유지
+
+![image](https://github.com/user-attachments/assets/39290057-52f4-438e-ace0-dcc2c1d9405b)
+
+3. Location: **OpenAI ChatGPT**  
+   (Defender for Cloud Apps Integration 필요)
+
+<img width="1409" alt="스크린샷 2025-06-29 오전 9 09 32" src="https://github.com/user-attachments/assets/ca0449ac-2b6e-4643-9a59-1f1a3ffc9897" />
+
+
+> ⭐️ Tips. ‘Data in browser activity’ 기반 DLP 정책은 **Microsoft Defender for Cloud Apps + Microsoft Edge 통합 기능**을 활용합니다.
+> 
+> | **브라우저** | **지원 여부** | **비고** |
+> | ------------ | ------------ | -------- |
+> | **Edge**    | ✅ 지원 | DLP 정책 작동 (Data in browser activity) |
+> | **Chrome**  | ❌ 미지원 | 정책 적용 불가 |
+> | **Safari**  | ❌ 미지원 | 정책 적용 불가 |
+> | **Firefox** | ❌ 미지원 | 정책 적용 불가 |
+
+> 권장 대응
+>
+> - **Microsoft Edge 사용 강제**: 조직 정책으로 AI Prompt 접근 시 Microsoft Edge 사용을 강제
+> - **Endpoint DLP 구성**: Chrome 등 타 브라우저에서도 DLP가 필요하면 ➔ **Endpoint DLP(Device-based 정책)** 별도 구성 필요
+
+#### [Step 3] Policy rule 설정
+
+- **Condition**
+  - Content contains: Sensitive info types
+  - Add condition → Content contains → Sensitive info types 선택
+    * 주민등록번호 (Korea Resident Registration Number)
+    * 여권번호 (Korea Passport Number)
+    * 신용카드번호 (Credit Card Number)
+
+- **Actions** : text > Block으로 설정
+
+<img width="1552" alt="스크린샷 2025-06-29 오전 9 17 22" src="https://github.com/user-attachments/assets/61623b68-3c27-40c6-9c26-d71e3c920477" />
+  
+| 옵션 | 의미 | 비고 |
+| --- | --- | --- |
+| **Text upload** | 사용자가 클라우드 앱(ex. ChatGPT, Gemini 등)에 **텍스트를 입력/업로드(프롬프트 포함)** 하는 행위 | Prompt 데이터 유출 차단 시 사용 |
+| **File upload** | 파일 업로드 차단 | 비활성화 (선택 안됨) |
+| **File download** | 파일 다운로드 차단 | 비활성화 (선택 안됨) |
+| **Cut or copy data** | 잘라내기/복사하기 차단 | 비활성화 (선택 안됨) |
+| **Paste clipboard data** | 붙여넣기 차단 | 비활성화 (선택 안됨) |
+
+
+> ⭐️ Tips. **Policy Tip 설정**
+> - 현재 **Data in browser activity (브라우저 기반 DLP)** 정책에는
+>  - Outlook, Teams, SharePoint와 같은 M365 workload DLP와 달리
+>  - **User notification (Policy Tip)** 설정 옵션이 존재하지 않음.
+
+✔️ 즉,
+- Audit Only: 사용자에게 별도 알림 없이 **관리자 로그만 기록**
+- Block: 차단되지만, 차단 안내 메시지가 Edge 팝업으로 나타날 수 있으나 **Policy Tip으로 표시되지 않음**
+
+- 그 외 설정
+
+| 항목                     | 권장 설정                                                                                   |
+| ---------------------- | --------------------------------------------------------------------------------------- |
+| **User overrides**     | Off (Override 허용하지 않음)                                                                  |
+| **Incident reports**   | Severity level = High<br>Send alert to admins = On<br>Add security team email if needed |
+
+
+#### [Step 4] Policy mode
+
+- Turn the policy on immediately
+
+| ✅ **옵션**                                         | **의미**                                                                          | **활용 시점**                                        |
+| ------------------------------------------------ | ------------------------------------------------------------------------------- | ------------------------------------------------ |
+| **1. Run the policy in simulation mode**         | 정책을 테스트 모드로 실행하여, 조건에 매칭되는 항목만 모니터링하고 실제 차단/조치는 하지 않음                           | - 정책 조건과 Scope 검증<br>- 조직 영향 없이 Rule match 상황 파악 |
+| 🔹 **Show policy tips while in simulation mode** | Simulation mode 상태에서도 사용자에게 Policy Tip(알림) 표시 <br> **효과:** 사용자 인지 가능, 실제 차단은 없음 | - 사용자 교육 및 사전 안내 목적                              |
+| **2. Turn the policy on immediately**            | 정책을 즉시 활성화(Enforce)하여, 조건에 매칭되는 항목을 차단/조치                                       | - Shadow IT, AI Prompt 무단 사용 차단                          |
+| **3. Leave the policy turned off**               | 정책을 비활성화 상태로 둠 (저장만)                                                            | - 아직 정책을 적용할 준비가 안된 경우                           |
+
+---
+
+> ⭐️ Tips. Data in browser activity 정책은 **Microsoft Edge + Defender for Cloud Apps Integration** 환경에서만 작동합니다. Chrome, Safari, Firefox에는 적용되지 않으므로, Endpoint DLP와 함께 병행 적용 권장.
+>
+> 1. **Data in browser activity 정책의 구조**
+>   - Purview DLP의 이 기능은 **Microsoft Defender for Cloud Apps** 의 **session control (Conditional Access App Control)** 기능과 통합되어 동작.
+>   - 즉, MDCA가 중간 proxy 역할을 하여 브라우저 활동을 모니터링 및 제어.
+>
+> 2. **작동 조건**
+>   | 조건 | 필요 여부 | 비고 |
+>   | --- | --- | --- |
+>   | Microsoft Edge | ✅ 필수 | MDCA + Edge 통합 필요 |
+>   | MDCA 라이선스 | ✅ 필수 | Microsoft 365 E5 / Microsoft Defender for Cloud Apps |
+>   | Endpoint DLP | ❌ 선택 | 브라우저 기반 외 로컬 데이터 보호 용도로 병행 권장 |
