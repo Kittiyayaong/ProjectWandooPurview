@@ -5,7 +5,6 @@
 ### 시나리오 
 - **Confidential – Wandoo 라벨**이 적용된 문서를
   - 외부로 메일 전송 시 **Risk alert 생성**
-  - 특정 그룹(`Wandoo test group`)은 예외 처리
   - 민감정보(Sensitive Info Types) 탐지 시 관리자 승인 및 알림
  
 
@@ -93,5 +92,34 @@ Purview console > Solutions > Insider Risk Management > Policies > + Create poli
 | **② Get alerts only for activity that includes priority content** | ➔ Priority content(SharePoint sites, Sensitivity labels, Sensitive info types 등) 포함 활동만 Risk Score 계산 및 Alert 생성<br>- Priority content가 없는 활동은 점수 계산 제외 | ✅ **운영 안정화 단계**<br>중요 콘텐츠 관련 유출/위험만 탐지해 false positive 감소 목표 시 |
 
 본 랩에서는 우선 **Get alerts for all activity** 선택하여 탐지 범위 넓히는 설정 진행 
+
+6. Trigger
+Insider Risk Policy에서 트리거(trigger)는 ‘이 정책의 감시를 시작해야 하는 시점’을 결정하는 이벤트 입니다. IRM 정책은 Scope(대상 사용자) 에 포함된 사람 모두를 항상 감시하는 것이 아니기 떄문에,반드시 Triggering Event(트리거 이벤트)가 발생해야 합니다. 이번 설정은 Module 4에서 **HR Connector** 생성 후 선택하여 진행합니다. 
+
+| 트리거 옵션                                                          | 설명                                            | 현재 상태  | 활성화 조건                              |
+| --------------------------------------------------------------- | --------------------------------------------- | ------ | ----------------------------------- |
+| **Inappropriate messages detected by communication compliance** | 사용자 메시지에서 부적절한(욕설, 차별, 위협) 표현 탐지 시 정책 Trigger | ❌ 비활성화 | Communication Compliance 정책 선 생성 필요 |
+| **HR data connector events**                                    | HR 시스템에서 퇴사, 징계 등 이벤트 발생 시 정책 Trigger         | ❌ 비활성화 | HR 커넥터 구성 필요                        |
+
+<img width="1375" alt="스크린샷 2025-06-29 오전 10 04 15" src="https://github.com/user-attachments/assets/56df6134-ea87-4c07-beb6-427b1d3ca845" />
+
+#### [Step 4] Indicator 설정
+
+<img width="793" alt="image" src="https://github.com/user-attachments/assets/779662ee-5159-4666-8683-f882b7723777" />
+해당 부분이 붉은색으로 되어있으면, 클릭 후 활성화 
+
+Office indicators
+
+Email sent externally (외부 이메일 전송)
+
+File shared externally (필요 시)
+
+Microsoft Defender for Cloud Apps indicators
+
+Exchange Online: Mail sent externally
+
+Cloud storage indicators
+
+(추후 OneDrive/SharePoint 연동 정책 필요 시 선택)
 
 
