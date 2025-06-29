@@ -63,34 +63,21 @@ Purview console > Solutions > Insider Risk Management > Policies > + Create poli
 
 3. Sensitivity Labels 설정
 
-민감도 라벨(Sensitivity Labels)이 적용된 파일이나 이메일을 **우선 보호 대상으로 지정** ➔ 해당 라벨이 붙은 콘텐츠에서 이벤트 발생 시 **높은 Risk Score** 부여
+민감도 라벨(Sensitivity Labels)이 적용된 파일이나 이메일을 **우선 보호 대상으로 지정** ➔ 해당 라벨이 붙은 콘텐츠에서 이벤트 발생 시 **높은 Risk Score** 부여 ➔ **보호가 필요한 라벨**을 선택 후 **[Add]** 클릭
    - Confidential – Wandoo
    - Highly Confidential – Finance
-4. **보호가 필요한 라벨**을 선택 후 **[Add]** 클릭
 
 > ⭐️ Tips. 권장 설정 시나리오
 > - 조직의 기밀 문서(예: IRM 보호 문서, 외부 공유 제한 문서)에 Confidential 이상 라벨이 붙어있다면, 해당 라벨을 선택
 > - 예시: **Confidential – Wandoo** 라벨 선택 ➔ 이 라벨이 붙은 문서를 다운로드, 업로드, 공유 등 이벤트 시 **High severity alert** 생성 가능
 
----
+4. Sensitive Info Types 설정
 
-### 🔷 **Sensitive Info Types**
-
-#### ✅ **화면 설명**
-- **위치:** Content to prioritize 단계 > Sensitive info types 선택
-- **목적:**  
-  주민등록번호, 여권번호, 신용카드번호 등 **민감정보(Sensitive Info Types)** 가 탐지된 콘텐츠를 우선 보호 대상으로 지정
-
-#### ✅ **설정 방법**
-1. **[Add or edit Sensitive info types]** 클릭  
-2. Microsoft Purview 내 정의된 Sensitive Info Types 리스트가 표시됨
-3. 예:
+주민등록번호, 여권번호, 신용카드번호 등 **민감정보(Sensitive Info Types)** 가 탐지된 콘텐츠를 우선 보호 대상으로 지정 ➔ 보호가 필요한 민감정보 타입을 선택 후 **[Add]** 클릭
    - Korea Resident Registration Number (주민등록번호)
    - South Korea Passport Number (여권번호)
    - Credit Card Number (신용카드번호)
-4. 보호가 필요한 민감정보 타입을 선택 후 **[Add]** 클릭
 
-#### ✅ **권장 설정 시나리오**
-- 주민등록번호, 여권번호 등 **법적 규제 대상 민감정보** 유출을 우선 탐지해야 할 경우
-- 예시: 주민등록번호 + 여권번호 + 신용카드번호 선택 ➔  
-  해당 정보가 포함된 콘텐츠의 활동(Event) 발생 시 **높은 Risk Score** 계산 ➔ 즉시 보안팀 대응 가능
+> ⭐️ Tips. 권장 설정 시나리오
+> - 주민등록번호, 여권번호 등 **법적 규제 대상 민감정보** 유출을 우선 탐지해야 할 경우
+> - 예시: 주민등록번호 + 여권번호 + 신용카드번호 선택 ➔ 해당 정보가 포함된 콘텐츠의 활동(Event) 발생 시 **높은 Risk Score** 계산 ➔ 즉시 보안팀 대응 가능
