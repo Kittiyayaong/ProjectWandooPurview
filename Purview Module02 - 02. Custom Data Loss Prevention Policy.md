@@ -1,6 +1,6 @@
 # Purview Module 02. Data Loss Prevention
 
-## Lab 1. Custom Data Loss Prevention Policy
+## Lab 2. Custom Data Loss Prevention Policy
 
 시나리오 
 1. **Microsoft Teams Prompt & 채팅 데이터 보호**
