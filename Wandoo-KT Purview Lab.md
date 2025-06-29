@@ -15,14 +15,6 @@
 
 ---
 
-#### [Step 0] 사전 준비
-
-- Microsoft Purview Portal 접속: [compliance.microsoft.com](https://compliance.microsoft.com)
-- 테스트 사용자 계정 준비
-- Confidential Sensitivity Label 미리 없으면 아래 Step 1에서 생성
-
----
-
 #### [Step 1] Sensitivity Label 생성
 
 1. **Information Protection > Labels > + Create a label**
