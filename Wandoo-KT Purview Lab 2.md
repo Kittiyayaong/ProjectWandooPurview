@@ -29,14 +29,26 @@ Wandoo-Sales 그룹의 B2B Deal 관련 **영업 기밀 자료**를 보호하기 
 
 ### (3) Sensitivity Label – Confidential – Sales Deal
 
-- Purview Portal > Information Protection > Labels > + Create a label  
-  ▸ Name: Confidential – Sales Deal  
-  ▸ Scope: Files & Emails, Groups & Sites  
-  ▸ Access content marking: “Wandoo Sales Confidential” 워터마크  
-  ▸ External sharing: Block external sharing from labeled SharePoint sites  
-  ▸ Conditional Access: Block unmanaged device access  
-  ▸ Publish to: Wandoo-Sales 그룹  
-  ▸ Policy setting: Users must provide justification to remove/downgrade label
+- Purview Portal > Information Protection > Labels > + Create a label
+  - Name: Wandoo Confidential – Sales Deal
+  - Scope: Files & Emails, Groups & Sites
+  - Assgin permission: Wandoo-Sales / 권한은 **Editor**
+  - Access content marking: “Wandoo Sales Confidential” 워터마크
+  - Auto-labeling enable
+    - 조건: Sensitive info types
+      - Korea Resident Registration Number
+      - Korea Passport Number
+      - Credit Card Number
+    - message: [자동 적용] 이 파일은 영업 기밀 정보가 포함되어 Sales Deal 보호 라벨이 적용되었습니다.
+  - Group&Sites
+    - Privacy and External user access: 이 옵션을 활성화하면 그룹/팀의 프라이버시 설정까지 강제 가능 (예: Private)
+    - External Sharing and Conditional Access: SharePoint 사이트 외부 공유 차단 + CA 정책 강제 (필수)
+  - Privacy: Private/ external 공유 금지   
+  - External sharing: 
+    - Organization에 있는 사람들만 접근 (외부 누구도 접근 불가 ➔ 기밀자료 보호)
+    - Conditional Access: 비관리 디바이스에서 접근 차단
+  - Publish to: Wandoo-Sales 그룹
+  - Policy setting: Users must provide justification to remove/downgrade label
 
 ---
 
