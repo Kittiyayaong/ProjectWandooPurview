@@ -1,4 +1,4 @@
-## Lab 사전 준비사항 
+![image](https://github.com/user-attachments/assets/37b78653-573c-4207-bfbe-72b88b6821f8)## Lab 사전 준비사항 
 
 ### 라벨 설정을 위한 사전 작업 
 Microsoft Purview에서 Microsoft 365 Groups, Teams, SharePoint 사이트에 민감도 라벨(Sensitivity Label)을 적용하기 위해, Entra ID 테넌트에 EnableMIPLabels 설정을 활성화하는 작업을 수행합니다.
@@ -36,7 +36,7 @@ winget install --id Microsoft.PowerShell --source winget
 1. 관리자권한으로 PowerShell 프롬프트를 열고 cmdlet을 실행하는 데 필요한 그래프 모듈을 설치합니다.
 
 ```powershell
-![image](https://github.com/user-attachments/assets/cb08c736-ab41-4663-87e3-86c4b4be8751)
+Install-Module Microsoft.Graph -Scope CurrentUser Install-Module Microsoft.Graph.Beta -Scope CurrentUser
 ```
 
 2. 테넌트에 연결합니다. (별도 외부 페이지에서 인증 진행)
