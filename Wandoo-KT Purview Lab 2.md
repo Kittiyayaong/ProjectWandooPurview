@@ -107,16 +107,16 @@ Override 기록, USB 저장 시도, 클라우드 업로드 시도 ➔ Trigger �
 - Purview > Insider Risk Management > Policies > + Create policy  
   ▸ Template: Data leaks by risky users  
   ▸ Name: Wandoo – Sales Deal Insider Exfiltration Monitoring  
-  ▸ Users: Wandoo-Sales 그룹  
-  ▸ Priority content: Sensitivity label ➔ Confidential – Sales Deal  
-  ▸ Indicators:
-  - Download to USB
-  - Copy to personal cloud storage
-  - Sending email with attachment externally
-  - Override justification recorded
+  ▸ Users & Groups: Wandoo-Sales 그룹  
+  ▸ Priority content: Sensitivity label ➔ Wandoo Confidential – Sales Deal  
+  ▸ Indicators: (금일 랩에서는 해당 indicator 활용이 불가하여 진행하지 않습니다.) 
+    - Creating or copying files to USB 
+    - Copy to personal cloud storage
+    - Sending email with attachment externally
+    - Override justification recorded
   ▸ Triggering events:
-  - DLP policy match
-  - Download from SharePoint or OneDrive
+    - DLP policy match
+    - Download from SharePoint or OneDrive
 
 ---
 
