@@ -115,7 +115,7 @@ Override 기록, USB 저장 시도, 클라우드 업로드 시도 ➔ Trigger �
     - Copy to personal cloud storage
     - Sending email with attachment externally
     - Override justification recorded
-  ▸ Triggering events:
+  ▸ Triggering events: "정책이 어떤 이벤트를 시작 신호로 삼아 리스크 점수를 계산하고 경고를 생성할지" 
     - DLP policy match
     - Download from SharePoint or OneDrive
 
