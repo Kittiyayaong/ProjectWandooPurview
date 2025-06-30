@@ -24,7 +24,7 @@ Wandoo-Sales 그룹의 B2B Deal 관련 **영업 기밀 자료**를 보호하기 
 
 - Entra ID > Groups > + New group  
   ▸ Group type: Microsoft 365  
-  ▸ Group name: Wandoo-Sales  
+  ▸ Group name: Wandoo-Sales
   ▸ Members: salesuser1
 
 ### (3) Sensitivity Label – Confidential – Sales Deal
