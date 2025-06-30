@@ -68,7 +68,8 @@ Sales Deal 라벨 파일 ➔ USB, 클립보드, 개인 클라우드, 외부 공�
   - **Conditions**
     - Content contains:
       - Sensitivity label: Wandoo Confidential – Sales Deal
-  - **Actions** (개인 클라우드 업로드 관련 항목은 하기 Tips 참고) 
+  - **Actions** (개인 클라우드 업로드 관련 항목은 하기 Tips 참고)
+    
 | 행위 | Action 설정 | 효과 |
 |--|--|--|
 | 외부 공유 | Block | OneDrive/SharePoint ➔ 외부 공유 차단 + Policy Tip (“Sales Deal 자료는 외부 공유 불가. 문의: secops@contoso.com”) |
