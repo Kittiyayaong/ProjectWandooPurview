@@ -39,7 +39,7 @@ Wandoo-Sales 그룹의 B2B Deal 관련 **영업 기밀 자료**를 보호하기 
 
 - Purview Portal > Information Protection > Labels > + Create a label
   - Name: Wandoo Confidential – Sales Deal
-  - Scope: Files & Emails, Groups & Sites
+  - Scope: Files & Emails, Groups & Sites (Sales Deal 기밀 자료 (Files, Emails) 보호, Groups & Sites (Teams/SharePoint) 보호, USB, 클립보드, 개인 클라우드 업로드 차단 ➔ 회의(캘린더 이벤트) 데이터 보호는 본 시나리오 범위에 포함되지 않으므로 제외) 
   - Assgin permission: Wandoo-Sales / 권한은 **Editor**
   - Access content marking: “Wandoo Sales Confidential” 워터마크
   - Auto-labeling enable
