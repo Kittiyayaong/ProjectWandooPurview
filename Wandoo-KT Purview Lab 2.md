@@ -62,19 +62,13 @@ Sales Deal 라벨 파일 ➔ USB, 클립보드, 개인 클라우드, 외부 공�
   ▸ Template: Custom policy  
   ▸ Name: Wandoo – Sales Deal Exfiltration Block  
   ▸ Locations:
-  - OneDrive and SharePoint
-  - Devices (Endpoint DLP)
+    - OneDrive and SharePoint
+    - Devices (Endpoint DLP)
   ▸ Users: Include ➔ Wandoo-Sales 그룹
-
----
-
-### **Conditions**
-
-- Content contains:
-  - Sensitivity label: Confidential – Sales Deal
-
-### **Actions**
-
+  - **Conditions**
+    - Content contains:
+      - Sensitivity label: Wandoo Confidential – Sales Deal
+  - **Actions** (개인 클라우드 업로드 관련 항목은 하기 Tips 참고) 
 | 행위 | Action 설정 | 효과 |
 |--|--|--|
 | 외부 공유 | Block | OneDrive/SharePoint ➔ 외부 공유 차단 + Policy Tip (“Sales Deal 자료는 외부 공유 불가. 문의: secops@contoso.com”) |
@@ -82,6 +76,25 @@ Sales Deal 라벨 파일 ➔ USB, 클립보드, 개인 클라우드, 외부 공�
 | 클립보드 복사 | Block | Endpoint ➔ 복사-붙여넣기 차단 (Slack, 메모앱 등) |
 | 개인 클라우드 업로드 | Block | Endpoint ➔ 개인 OneDrive, Gmail, Dropbox 업로드 차단 |
 | Override with justification | Allow override with justification | override 시 사유 기록 ➔ IRM Trigger 가능 |
+
+---
+> ⭐Tips. 개인 클라우드 업로드 
+> <img width="931" alt="image" src="https://github.com/user-attachments/assets/154b6228-f4b5-4236-a367-672aa668ce50" />
+
+> ⭐Tips. Global Block List
+>
+> <img width="696" alt="image" src="https://github.com/user-attachments/assets/2672aa18-c80c-4650-8fbf-3f0b3aacbf76" />
+>
+> * 설정 위치 : Purview > Setting > DLP > Browser and domain restrictions to sensitive data > Service domains
+> * Service domain에 해당 도메인 Url 기입 후, 상단에 **Block**처리
+
+> ⭐Tips. Sensitive service domain groups
+>
+> * 목적: 도메인 그룹을 만들어 ➔ 정책별로 다른 액션 지정하는데 사용
+| 도메인 그룹             | 기본 Block | 선택적 다른 액션  |
+| ------------------ | -------- | ---------- |
+| `drive.google.com` | Block    | Audit only |
+| `dropbox.com`      | Block    | Block      |
 
 ---
 
