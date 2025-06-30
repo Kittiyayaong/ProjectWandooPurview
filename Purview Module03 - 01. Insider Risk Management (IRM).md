@@ -33,7 +33,7 @@ Purview console > Solutions > Insider Risk Management > Policies > + Create poli
 
 1. 설정
 
-   ✅ 반드시 설정할 항목
+   ✅ 설정을 추천
    * Sensitivity labels: Confidential, Highly Confidential 등
    * Sensitive info types: 주민번호, 여권번호, 카드번호, 계좌번호
    * Trainable classifiers: 계약서, HR 문서, 재무 보고서 등
