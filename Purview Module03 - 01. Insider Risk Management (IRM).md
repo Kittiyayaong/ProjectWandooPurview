@@ -32,6 +32,7 @@ Purview console > Solutions > Insider Risk Management > Policies > + Create poli
 > 내부자 위협 정책의 핵심은 ‘어떤 데이터를 보호할 것인가’를 정의하여, 우선순위 설정을 통해 조직의 중요 데이터 보호 정책에 집중 가능. 설정하지 않으면, 탐지 범위는 유지되지만, 중요도(Severity) 점수와 Alert 생성 가능성이 현저히 낮아짐 ➔ 보안 이벤트가 묻혀버릴 가능성 있음 
 
 1. 설정
+
    ✅ 반드시 설정할 항목
    * Sensitivity labels: Confidential, Highly Confidential 등
    * Sensitive info types: 주민번호, 여권번호, 카드번호, 계좌번호
@@ -41,7 +42,7 @@ Purview console > Solutions > Insider Risk Management > Policies > + Create poli
    * File extensions: zip, csv, pst 등 특정 확장자 파일만 중요하면 선택
    * SharePoint sites: 특정 부서만 모니터링한다면 선택
 
-2. Sharepoint 설정
+3. Sharepoint 설정
 
 <img width="1000" alt="image" src="https://github.com/user-attachments/assets/84102bd8-a5bf-44f8-abf7-466c7cb48108" />
 
