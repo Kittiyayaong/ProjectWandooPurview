@@ -36,7 +36,7 @@ winget install --id Microsoft.PowerShell --source winget
 1. 관리자권한으로 PowerShell 프롬프트를 열고 cmdlet을 실행하는 데 필요한 그래프 모듈을 설치합니다.
 
 ```powershell
-Install-Module Microsoft.Graph -Scope CurrentUser Install-Module Microsoft.Graph.Beta -Scope CurrentUser
+Install-Module Microsoft.Graph.Beta -Scope CurrentUser
 ```
 
 2. 테넌트에 연결합니다. (별도 외부 페이지에서 인증 진행)
