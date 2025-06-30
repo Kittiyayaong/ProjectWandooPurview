@@ -96,7 +96,7 @@ Purview console > Solutions > Insider Risk Management > Policies > + Create poli
 본 랩에서는 우선 **Get alerts for all activity** 선택하여 탐지 범위 넓히는 설정 진행 
 
 6. Trigger
-Insider Risk Policy에서 트리거(trigger)는 ‘이 정책의 감시를 시작해야 하는 시점’을 결정하는 이벤트 입니다. IRM 정책은 Scope(대상 사용자) 에 포함된 사람 모두를 항상 감시하는 것이 아니기 떄문에,반드시 Triggering Event(트리거 이벤트)가 발생해야 합니다. 이번 설정은 Module 4에서 **Communication Compliance** 생성 후 선택하여 진행합니다. 
+Insider Risk Management 정책에서 어떤 이벤트가 발생했을 때 사용자의 리스크 점수를 계산하기 시작할지 정의하는 단계입니다. IRM 정책은 Scope(대상 사용자) 에 포함된 사람 모두를 항상 감시하는 것이 아니기 떄문에,반드시 Triggering Event(트리거 이벤트)가 발생해야 합니다. 이번 설정은 Module 4에서 **Communication Compliance** 생성 후 선택하여 진행합니다. 
 
 | 트리거 옵션                                                          | 설명                                            | 현재 상태  | 활성화 조건                              |
 | --------------------------------------------------------------- | --------------------------------------------- | ------ | ----------------------------------- |
@@ -135,8 +135,26 @@ Insider Risk Policy에서 트리거(trigger)는 ‘이 정책의 감시를 시�
 #### [Step 5] Detection options (Sequence detection) 설정 
 
 #### Sequence detection  
-여러 위험 행동이 연속적으로 발생할 때** 높은 Risk score를 부여하는 고급 탐지 옵션
+7일 기간 내에 두 가지 이상의 특정 활동이 순차적으로 발생하면 이를 고위험 행동으로 감지하는 기능
 
+> ⭐️ 예시
+>
+> Sequence detection: Download from Microsoft 365 location then exfiltrate
+> 사용자가 M365에서 파일을 다운로드 ➔ 외부로 유출하면 리스크 이벤트로 탐지
+
+
+> ⭐️ 단일 Indicator 설정을 별도로 구성한 경우:
+>
+> Indicators 단계에서 “Download files from SharePoint or OneDrive” 같은 단일 indicator를 활성화하면 다운로드만으로도 alert이 생성될 수 있습니다.
+
+> ⭐️Sequence detection이 아닌 단일 이벤트 탐지 정책을 사용한 경우:
+>
+> Insider Risk Policy의 Indicator 설정에서 단일 행동을 감시하도록 구성 시 가능
+
+> ⭐️ DLP 정책과의 차이점
+>
+> DLP는 단일 다운로드도 조건 충족 시 alert 생성 가능, Insider Risk는 기본적으로 연속된 위험 시퀀스를 활용
+> 
 | 옵션 | 설명 | 시나리오 적합도 |
 | --- | --- | --- |
 | **Download from Microsoft 365 location then exfiltrate** | M365 (SharePoint, OneDrive)에서 파일 다운로드 후 외부 유출 시 탐지 | ⭐⭐⭐⭐⭐ (필수) |
