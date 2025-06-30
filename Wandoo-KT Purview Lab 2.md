@@ -18,7 +18,7 @@ Wandoo-Sales 그룹의 B2B Deal 관련 **영업 기밀 자료**를 보호하기 
 ### (1) 사용자 계정 생성
 
 - **salesuser1**  
-  - Entra ID > Users > + New user ➔ salesuser1 생성
+  - [Entra ID](entra.microsoft.com) > Users > + New user ➔ salesuser1 생성
 
 ### (2) 그룹 생성 – Wandoo-Sales
 
