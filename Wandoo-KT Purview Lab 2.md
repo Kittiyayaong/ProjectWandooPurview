@@ -8,7 +8,6 @@ Wandoo-Sales 그룹의 B2B Deal 관련 **영업 기밀 자료**를 보호하기 
 
 1. Sales Deal 라벨 ➔ 외부 공유 차단  
 2. USB 저장, 클립보드 복사, 개인 클라우드 업로드 차단  
-3. Override with justification ➔ Insider Risk Trigger  
 
 ---
 
@@ -97,26 +96,6 @@ Sales Deal 라벨 파일 ➔ USB, 클립보드, 개인 클라우드, 외부 공�
 | `drive.google.com` | Block    | Audit only |
 | `dropbox.com`      | Block    | Block      |
 
----
 
-## ✅ 3. Insider Risk Management Policy 생성
-
-### **목적**
-
-Override 기록, USB 저장 시도, 클라우드 업로드 시도 ➔ Trigger ➔ 사용자 모니터링
-
-- Purview > Insider Risk Management > Policies > + Create policy  
-  ▸ Template: Data leaks by risky users  
-  ▸ Name: Wandoo – Sales Deal Insider Exfiltration Monitoring  
-  ▸ Users & Groups: Wandoo-Sales 그룹  
-  ▸ Priority content: Sensitivity label ➔ Wandoo Confidential – Sales Deal  
-  ▸ Indicators: (금일 랩에서는 해당 indicator 활용이 불가하여 진행하지 않습니다.) 
-    - Creating or copying files to USB 
-    - Copy to personal cloud storage
-    - Sending email with attachment externally
-    - Override justification recorded
-  ▸ Triggering events: "정책이 어떤 이벤트를 시작 신호로 삼아 리스크 점수를 계산하고 경고를 생성할지" 
-    - DLP policy match
-    - Download from SharePoint or OneDrive
 
 
